@@ -4,7 +4,7 @@ blog_theme: light # Or use dark
 name: Chalk
 paginate: 25
 url: http://chalk.nielsenramon.com
-baseurl: os
+baseurl: /os
 
 # Optional settings
 
