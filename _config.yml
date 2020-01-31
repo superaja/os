@@ -8,7 +8,7 @@ baseurl: /os
 
 # Optional settings
 
-about_enabled: false # Change to true if you wish to show an icon in the navigation that redirects to the about page
+about_enabled: true # Change to true if you wish to show an icon in the navigation that redirects to the about page
 discus_identifier: # Add your Disqus identifier
 ga_analytics: # Add your GA Tracking Id
 local_fonts: false # Change to true if you wish to use local fonts
@@ -22,7 +22,7 @@ social:
   flickr: # Add your Flickr handle
   github: superaja # Add your GitHub handle
   linkedin: # Add your LinkedIn handle
-  twitter: dasnurkar # Add your Twitter handle
+  twitter: Suprraja # Add your Twitter handle
   email: # Add your Email address
   bitcoin: # Add your Bitcoin link or address
   ethereum: # Add your Ethereum link or address
@@ -53,6 +53,7 @@ assets:
     - _assets/javascripts
     - _assets/stylesheets
     - _assets/yarn
+    - _assets/images
 collections:
   my_tags:
     output: true

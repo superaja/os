@@ -14,4 +14,4 @@ The only criteria for a digital diary name is that it should not remotely reflec
 
 So here it is...
 
-@Superaja
+OS
