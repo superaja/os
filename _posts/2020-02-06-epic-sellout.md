@@ -3,7 +3,7 @@ layout: post
 title: "Epic Sellout"
 description: "Epic System's CEO and some of the nation's 60 hospital systems have signed a letter opposing the HHS rule that would make it easier for patients to get their healthcare records and increase interoperability through APIs."
 thumb_image: "documentation/sample-image.jpg"
-tags: [realtime, analytics]
+tags: [healthcare]
 ---
 
 Christina Farr [reporting for CNBC](https://www.cnbc.com/2020/02/05/epic-about-60-hospitals-sign-letter-opposing-hhs-proposed-data-rules.html)
