@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Year Progress"
-description: "RealTime Visualizations"
+description: "Applications for realtime analytics are not easy to build. But one way to master is to build simple applications. I used the Time functions and the magic of Live Updates in Dash to get this one going"
 thumb_image: "documentation/sample-image.jpg"
 tags: [realtime, analytics]
 ---
