@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Visualizing AutoML Processes with AutoMLizer - Part 1"
+title: "Visualizing AutoML Processes with AutoMLizer"
 description: "Opening the covers of these black box systems to understand the inner workings is the step in the right direction for greater transparency. AutoMLizer helps in this regard by providing a mechanism to understand in real-time the progress of the AutoML system and get deeper visual insights on the decisions of the AutoML"
 thumb_image: "documentation/sample-image.jpg"
 tags: [REALTIME, ANALYTICS, ML]
