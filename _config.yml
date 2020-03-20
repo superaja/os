@@ -4,7 +4,7 @@ blog_theme: light # Or use dark
 name: Obsidian Steel
 paginate: 25
 url: https://0bsidiansteel.com
-baseurl: /os
+baseurl:
 
 # Optional settings
 
