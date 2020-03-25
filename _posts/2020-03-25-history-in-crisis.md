@@ -2,7 +2,7 @@
 layout: post
 title: "History In Crisis - Lessons from COVID-19"
 description: "David S.Jones excellent perspective in New England Journal of Medicine providing a historical perspective on how people react to epidemics"
-thumb_image: "documentation/sample-image.jpg"
+thumb_image: "oslogo.png"
 tags: [healthcare]
 ---
 
