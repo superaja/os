@@ -10,7 +10,9 @@ tags: [misc, web, jekyll]
 
 "Obsidian is a naturally occuring volcanic glass formed as an extrusive igneous rock" - wikipedia entry.
 
-The only criteria for a digital diary name is that it should not remotely reflect anything to the contents of the diary. "Obsidian Steel" is really bringing two words together that really makes not much sense. Obsidian is a shade of black while steel is just steel. It does closely reflect the name of my favorite gun in Call of Duty and hence became the defacto front runner while I was searching for a name. 
+The only criteria for a digital diary name is that it should not remotely reflect anything to the contents of the diary. "Obsidian Steel" brings two words together that really makes not much sense. It also closely reflect the name of my favorite gun in Call of Duty and hence became the defacto front runner while I was searching for a name. 
+
+I have always founded myself at the intersection of healthcare and analytics. And I love creating things. But I have never been sincere to broadcast or document my work. Obsidian Steel's purpose to be the channel where I can opine and broadcast my work. 
 
 So here it is...
 
