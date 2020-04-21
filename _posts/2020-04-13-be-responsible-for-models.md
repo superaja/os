@@ -8,7 +8,7 @@ tags: [analytics]
 
 
 1. 538 predictions are probabilities (likelihood) of an event happening (or not).
-2. Their models try to represent real-world but cannot represent uncertainties of the real-world. In other words, they are not well model uncertainties and should not sold as such.
+2. Their models try to represent real-world but cannot represent uncertainties of the real-world. In other words, they are not well modeled uncertainties and should not sold as such.
 3. So if they said x% is the likelihood of something will happen, there is (1-x%) chance that it will not happen. In other words, they are never wrong cause if it did not happen, they would say we told you so that (1-x%) chance it did not happen.
 4. The issue is not with their modeling approach. The issue at hand is to sell it to the world as they have the best models and that they can be never wrong - which is a fallacy.
 
