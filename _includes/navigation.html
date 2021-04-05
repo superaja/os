@@ -162,6 +162,15 @@
         </a>
       </li>
     {% endif %}
+    <!-- My Site-->
+    {% if site.project1 == true %}
+      <li>
+        <a href="http://tc.0bsidiansteel.com" rel="noreferrer noopener" target="_blank" title="Tracking Cat">
+          {% include svg-icon.html icon="tc1" %}
+        </a>
+      </li>
+    {% endif %}
+    <!-- End My Site-->
     {% if site.rss_enabled == true %}
       <li>
         <a href="{{ 'feed.xml' | relative_url }}" rel="noreferrer noopener" target="_blank" title="RSS">
