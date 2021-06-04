@@ -1,4 +1,0 @@
----
-slug: businessintelligence
-name: Businessintelligence
----

@@ -1,4 +1,0 @@
----
-slug: analytics
-name: Analytics
----
