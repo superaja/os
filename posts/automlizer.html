@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Obsidian Steel | Visualizing AutoML Processes with AutoMLizer</title>
+  <meta name="description" content="Opening the covers of these black box systems to understand the inner workings is the step in the right direction for greater transparency. AutoMLizer helps in this regard by providing a mechanism to understand in real-time the progress of the AutoML system and get deeper visual insights on the decisions of the AutoML">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="Visualizing AutoML Processes with AutoMLizer">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://augml.xyz/posts/automlizer">
+  <meta property="og:description" content="Opening the covers of these black box systems to understand the inner workings is the step in the right direction for greater transparency. AutoMLizer helps in this regard by providing a mechanism to understand in real-time the progress of the AutoML system and get deeper visual insights on the decisions of the AutoML">
+  <meta property="og:site_name" content="Obsidian Steel">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="https://augml.xyz/posts/automlizer">
+  <meta name="twitter:title" content="Visualizing AutoML Processes with AutoMLizer">
+  <meta name="twitter:description" content="Opening the covers of these black box systems to understand the inner workings is the step in the right direction for greater transparency. AutoMLizer helps in this regard by providing a mechanism to understand in real-time the progress of the AutoML system and get deeper visual insights on the decisions of the AutoML">
+
+  
+    
+      <meta property="og:image" content="https://augml.xyz/assets/oslogo-c6d880df930358b871752234dce5a6ee55965d57422cee3aac2b7244bacf525d.png">
+      <meta name="twitter:image" content="https://augml.xyz/assets/oslogo-c6d880df930358b871752234dce5a6ee55965d57422cee3aac2b7244bacf525d.png">
+    
+  
+
+  <link href="https://augml.xyz/feed.xml" type="application/rss+xml" rel="alternate" title="Obsidian Steel Last 10 blog posts" />
+
+  
+
+  
+
+    
+      <link rel="icon" type="image/x-icon" href="/assets/favicon-light-22c205a680138d6ed7626a0c549bce2fa252eb358df80c69bcc3d2d5b2a9ee05.ico">
+      <link rel="apple-touch-icon" href="/assets/apple-touch-icon-light-72f711e49b77f9ed0a9f6d50b99de08cb0fea60e64860674aebdbe816362177f.png">
+      <link rel="stylesheet" type="text/css" href="/assets/light-b2cc845305e77df294c0cb054632d4a7919c46958174afe7bb179705a882022d.css">
+    
+
+  
+
+</head>
+
+<body>
+  <main>
+    <div class="grid grid-centered">
+      <div class="grid-cell">
+        <nav class="header-nav scrollappear">
+  <a href="/" class="header-logo" title="Obsidian Steel">Obsidian Steel</a>
+  <ul class="header-links">
+    
+      <li>
+        <a href="/about" title="About me">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-about">
+  <use href="/assets/about-ecf154b571ab8034ae00aeed91a3b7ad68db80b46d958753ad6216c919486e88.svg#icon-about" xlink:href="/assets/about-ecf154b571ab8034ae00aeed91a3b7ad68db80b46d958753ad6216c919486e88.svg#icon-about"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="https://twitter.com/Suprraja" rel="noreferrer noopener" target="_blank" title="Twitter">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-twitter">
+  <use href="/assets/twitter-8842c33965263ad1b03a978406826677a668f94125d5837e70ab83f24b3213a7.svg#icon-twitter" xlink:href="/assets/twitter-8842c33965263ad1b03a978406826677a668f94125d5837e70ab83f24b3213a7.svg#icon-twitter"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+      <li>
+        <a href="https://github.com/superaja" rel="noreferrer noopener" target="_blank" title="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-github">
+  <use href="/assets/github-094f81040819f34343ee6ffff0980f17e2807b08b595eaaf66ae3554934fd78d.svg#icon-github" xlink:href="/assets/github-094f81040819f34343ee6ffff0980f17e2807b08b595eaaf66ae3554934fd78d.svg#icon-github"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- My Site-->
+    
+      <li>
+        <a href="http://tc.0bsidiansteel.com" rel="noreferrer noopener" target="_blank" title="Tracking Cat">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-tc1">
+  <use href="/assets/tc1-15ecece0b41c5312a1012d3065b427cca87e57a603c1f786f8ef1ea07e8861fd.svg#icon-tc1" xlink:href="/assets/tc1-15ecece0b41c5312a1012d3065b427cca87e57a603c1f786f8ef1ea07e8861fd.svg#icon-tc1"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    <!-- End My Site-->
+    
+      <li>
+        <a href="/feed.xml" rel="noreferrer noopener" target="_blank" title="RSS">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-rss">
+  <use href="/assets/rss-541ec5cea9cefd10d2fcfec01888f3f231a8829940249835fa7b7b3a12ae0d0d.svg#icon-rss" xlink:href="/assets/rss-541ec5cea9cefd10d2fcfec01888f3f231a8829940249835fa7b7b3a12ae0d0d.svg#icon-rss"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+  </ul>
+</nav>
+
+
+
+        <article class="article scrollappear">
+          <header class="article-header">
+            <h1>Visualizing AutoML Processes with AutoMLizer</h1>
+            <p>Opening the covers of these black box systems to understand the inner workings is the step in the right direction for greater transparency. AutoMLizer helps in this regard by providing a mechanism to understand in real-time the progress of the AutoML system and get deeper visual insights on the decisions of the AutoML</p>
+            <div class="article-list-footer">
+  <span class="article-list-date">
+    February 26, 2020
+  </span>
+  <span class="article-list-divider">-</span>
+  <span class="article-list-minutes">
+    
+    
+      6 minute read
+    
+  </span>
+  <span class="article-list-divider">-</span>
+  <div class="article-list-tags">
+    
+      
+      <a href="/tag/realtime" title="See all posts with tag 'Realtime'">Realtime</a>
+    
+      
+      <a href="/tag/analytics" title="See all posts with tag 'Analytics'">Analytics</a>
+    
+      
+      <a href="/tag/ml" title="See all posts with tag 'ML'">ML</a>
+    
+  </div>
+</div>
+          </header>
+
+          <div class="article-content">
+            <p><strong>Summary</strong></p>
+
+<p>AutoML systems attempt to find the best machine learning pipelines through data preprocessing, feature engineering, algorithm and hyperparameter selection. Most AutoML systems are blackboxes. Opening the covers of these black box systems to understand the inner workings is the step in the right direction for greater transparency. Why did the AutoML system select a particular pipeline? What was the scope of the hyperparameter space ? And what was the impact of various hyperparameters on the pipeline performance? This blog proposes a system of analytical methods to answer such questions and provide an intuition on the inner working of such systems.</p>
+
+<p><strong>Background</strong></p>
+
+<p>The impact of Machine Learning in our world is significant. Despite the impact, the model building flow is fairly consistent and comprises of a series of steps as shown below. Most of them are iterative in nature and are prime targets to automate. Automated Machine Learning (AutoML) are systems that automate parts of these flow.</p>
+
+<p><a href="/assets/automlizer/mlprocess-239e5388a34097c0e5a728f85afd4e924deeff9fd10f0104990e7454e09c4f48.jpg">
+  <img src="/assets/automlizer/mlprocess-239e5388a34097c0e5a728f85afd4e924deeff9fd10f0104990e7454e09c4f48.jpg" alt="ML Process" class="zooming" data-rjs="/assets/automlizer/mlprocess-239e5388a34097c0e5a728f85afd4e924deeff9fd10f0104990e7454e09c4f48.jpg" data-zooming-width="823" data-zooming-height="271" />
+</a></p>
+
+<p>Several open-source and commercial AutoML systems are currently available and their use is slowly becoming ubiquitous given their value to automate the drudgery involved in finding the best performing model.</p>
+
+<p>And just as everything AI related has a tendency to be hyped, <a href="https://www.gartner.com/smarterwithgartner/top-trends-on-the-gartner-hype-cycle-for-artificial-intelligence-2019/">AutoML is also not spared</a>. Cutting through this hype, the concept and working of AutoML systems is fairly simple.</p>
+
+<p>AutoML systems primarily solve the CASH (Combined Algorithm Selection and Hyperparameter) problem. They generate a vast domain of pipelines using predefined set of algorithms and relevant hyperparameter (or hyperpartition) values. Executing each pipelines and tracking the performance is almost an impossible task given the sheer permutations and combinations in the algorithms and hyperparameter space. To effectively navigate this search space and determine top performing models, AutoML systems take advantage of combining optimization techniques like Bayesian Optimization with<a href="https://www.microsoft.com/en-us/research/publication/probabilistic-matrix-factorization-for-automated-machine-learning/"> meta-learning</a>. This allows AutoML systems to identify the best pipelines within an acceptable amount of budget (usually provided in terms of processing time, Generations or limited by the number of algorithms and range of hyperparameters provided).</p>
+
+<p><em>In other words, AutoML system find the best performing pipeline within the budget specified by building thousands of pipelines and searching this space using optimization techniques.</em></p>
+
+<p><a href="/assets/automlizer/automlsystem-05d6533c218bbc60d8b9d53281131134ae706684bed91058a0db41789cf5ca0e.jpg">
+  <img src="/assets/automlizer/automlsystem-05d6533c218bbc60d8b9d53281131134ae706684bed91058a0db41789cf5ca0e.jpg" alt="AutoML System" class="zooming" data-rjs="/assets/automlizer/automlsystem-05d6533c218bbc60d8b9d53281131134ae706684bed91058a0db41789cf5ca0e.jpg" data-zooming-width="958" data-zooming-height="636" />
+</a></p>
+
+<p>Users running AutoML systems are faced with some key decisions and need answers to critical questions.</p>
+
+<ol>
+  <li>Does the default configuration space (Algorithm and Hyperparameter choices) contribute to high performing pipelines or do they need to be adjusted? Is the search space optimally configured?</li>
+  <li>Does increasing the training budget effectively find a “better” pipeline?</li>
+  <li>Can I get deeper insights into the performance of the AutoML system during the execution cycle in order to increase confidence in the pipelines generated?</li>
+</ol>
+
+<p>The proposed analytical and visualization methods (referred to AutoMLizer going forward) enables the user to reach these key decisions.</p>
+
+<p><strong>Related Work</strong></p>
+
+<p>This work is heavily inspired by the paper<a href="https://dai.lids.mit.edu/projects/atmseer/"> ATMSeer: Increasing Transparency and Controllability in Automated Machine Learning</a>. In the paper, the author proposes similar ideas for ATM — an AutoML system built by the author. I am using<a href="https://epistasislab.github.io/tpot/"> TPOT</a> as the underlying AutoML system.</p>
+
+<p><strong>AutoML Visualizer (AutoMLizer)</strong></p>
+
+<p>AutoMLizer is a real-time advanced visual intelligence application written in Python that helps the user reach critical decisions by analyzing the effectiveness of pipelines generated by the AutoML system and a deeper analysis on the effect of hyperparameters/hyperpartition on pipeline performance.</p>
+
+<p><a href="/assets/automlizer/diabetesalgos-e548c05fdc9a8b7ed2044280e473b30db3ca72407fa391b6f9cc36d81e8e3ab4.png">
+  <img src="/assets/automlizer/diabetesalgos-e548c05fdc9a8b7ed2044280e473b30db3ca72407fa391b6f9cc36d81e8e3ab4.png" alt="Algo Histogram" class="zooming" data-rjs="/assets/automlizer/diabetesalgos-e548c05fdc9a8b7ed2044280e473b30db3ca72407fa391b6f9cc36d81e8e3ab4.png" data-zooming-width="1813" data-zooming-height="868" />
+</a></p>
+
+<p>The front-end UI comprises of 3 sections</p>
+
+<ul>
+  <li><strong>Run Specifications</strong>: This control panel allows the user to provide the specifics of a “Run” including the training data, label, problem type (Classification or Regression) , evaluation metric and budget. The label selection drop-down is automatically populated based on the underlying columns in the provided dataset.</li>
+  <li><strong>Run Status and Pipeline Performance</strong>: This section provides the user the ability to track the status of the Run in real-time and the performance tracking of pipelines via a histogram, Pipeline profile charts and Top 10 pipelines. In addition, two gauge charts provide the percentage hyperparameters and algorithms search space covered during the course of the Run.</li>
+  <li><strong>Detailed Profiler</strong>: This section contains Algorithm Histograms for deeper analysis on performance of each algorithm and an interactive experience driven by the Top 10 Pipelines chart. Selecting any pipeline on this chart will display details of the pipeline components (currently limited to 10 values). By further selecting, each algorithm in the pipeline the user is provided with the detailed profiles of the hyperparameters and their performance during the run.</li>
+</ul>
+
+<p><strong>Application Architecture</strong></p>
+
+<p><a href="/assets/automlizer/apparchitecture-fd97e792163bd5a77a0250be7b6857a1a35e6edba6a00c6e9a97b298845ae304.jpg">
+  <img src="/assets/automlizer/apparchitecture-fd97e792163bd5a77a0250be7b6857a1a35e6edba6a00c6e9a97b298845ae304.jpg" alt="Application Architecture" class="zooming" data-rjs="/assets/automlizer/apparchitecture-fd97e792163bd5a77a0250be7b6857a1a35e6edba6a00c6e9a97b298845ae304.jpg" data-zooming-width="424" data-zooming-height="137" />
+</a></p>
+
+<p>The application architecture comprises of:</p>
+
+<ol>
+  <li><strong>Backend Engine</strong>: Facilitates all requests from the front end, runs the AutoML engine and coordinates i/o with a back-end database. As it is built from the ground-up with APIs, all aspects of the application can be accessed via any standard client.</li>
+  <li><strong>Front End</strong>: A thin visualization client built with<a href="https://dash.plot.ly/"> Dash</a> that uses APIs to communicate with the Backend Engine</li>
+  <li><strong>Database</strong>: MongoDB is used to persist all the data generated during the course of the Run.</li>
+</ol>
+
+<p><strong>Use Case 1:</strong></p>
+
+<p><strong>Diabetes Dataset</strong>: The dataset is used to predict whether a patient has diabetes based on the various attributes provided in the dataset.</p>
+
+<p><strong>Type</strong>: Classification:</p>
+
+<p>The user has selected 29 Generations as the budget for the AutoML framework.</p>
+
+<p>The Run Status components of the app indicate a successful run with most pipelines scoring above 70% providing the necessary benchmark for the further modification. In addition, the best score is around 78.8% with more than 90% of the hyperparameters and 80% of algorithms covered from the given configuration.</p>
+
+<p><a href="/assets/automlizer/diabetesrunstatus-5536b7c2fcc3dfba324c05e34a70c95560b66df6dc8370ac277c60ead4fd133f.png">
+  <img src="/assets/automlizer/diabetesrunstatus-5536b7c2fcc3dfba324c05e34a70c95560b66df6dc8370ac277c60ead4fd133f.png" alt="Run Status" class="zooming" data-rjs="/assets/automlizer/diabetesrunstatus-5536b7c2fcc3dfba324c05e34a70c95560b66df6dc8370ac277c60ead4fd133f.png" data-zooming-width="445" data-zooming-height="909" />
+</a></p>
+
+<p>By comparing the Algorithm Histograms, the user gets an intuition that LogisticRegression and Randomforest and their corresponding ensembles are performing better than the rest of the configuration.</p>
+
+<p>This fact is further confirmed in the Top 10 Pipelines chart as Pipeline-122 and Pipeline-6 are composed of these 2 algorithms. The user further analyzes these pipelines and how the hyperparameters / hyperpartions are contributing to the pipeline accuracy by selecting the pipeline and the corresponding algorithm. The details of the hyperparameters and hyperpartitions are shown in the Detailed profiler.</p>
+
+<p><a href="/assets/automlizer/diabetestopn-00fb462747fc63297a2a6d21d81f45bdb6cbbfc5eeb2f6a85f782e34af4ee1a2.png">
+  <img src="/assets/automlizer/diabetestopn-00fb462747fc63297a2a6d21d81f45bdb6cbbfc5eeb2f6a85f782e34af4ee1a2.png" alt="Top 10 Pipelines" class="zooming" data-rjs="/assets/automlizer/diabetestopn-00fb462747fc63297a2a6d21d81f45bdb6cbbfc5eeb2f6a85f782e34af4ee1a2.png" data-zooming-width="1791" data-zooming-height="819" />
+</a></p>
+
+<p>In addition,  the user further notes the profiles of the hyperpartition of C and max_iter may need to be adjusted during the next run. Selecting randomforest indicate something interesting on max_features and min_samples_leaf profiles. Keeping min_samples_leaf below a 10 and max_features between 0.4 and 0.6 seem to be getting the highest performing pipeline.</p>
+
+<p><a href="/assets/automlizer/diabeteshyper-6e5e62274991845eefd3e2e5bd93677536efbae029d809b4843c9c938d6bc931.png">
+  <img src="/assets/automlizer/diabeteshyper-6e5e62274991845eefd3e2e5bd93677536efbae029d809b4843c9c938d6bc931.png" alt="Hyperparameter Analysis" class="zooming" data-rjs="/assets/automlizer/diabeteshyper-6e5e62274991845eefd3e2e5bd93677536efbae029d809b4843c9c938d6bc931.png" data-zooming-width="1411" data-zooming-height="802" />
+</a></p>
+
+<p><strong>Use Case 2:</strong></p>
+
+<p>Boston Dataset: The dataset is used to forecast the median price of a house in Boston based on various real-estate attributes</p>
+
+<p>Type: Regression</p>
+
+<p>The user selects the training file and then selects the target to be trained from the drop-down box. In addition, the user selects the type of the problem and picks 5 Generations as the budget for the AutoML framework to set up the baseline</p>
+
+<p><a href="/assets/automlizer/regressionrunstatus-59ce751261b82ba177205b8ff7ea9ee9e04c747021c07b7b5356fcf7da12a0e4.png">
+  <img src="/assets/automlizer/regressionrunstatus-59ce751261b82ba177205b8ff7ea9ee9e04c747021c07b7b5356fcf7da12a0e4.png" alt="Regression Run Status" class="zooming" data-rjs="/assets/automlizer/regressionrunstatus-59ce751261b82ba177205b8ff7ea9ee9e04c747021c07b7b5356fcf7da12a0e4.png" data-zooming-width="451" data-zooming-height="886" />
+</a></p>
+
+<p>Once the training starts, AutoMLizer starts providing the details of the training through the real-time Run Status and Pipeline Performance components. The best score (RSME) is 3.2</p>
+
+<p>On close examination of the the algorithm histograms, it is clear that the random forest regressor and gradientboost regressor are involved in high performance pipeline which can be confirmed from the top 10 pipeline chart.</p>
+
+<p>And similar to the last use case, further analysis can be done through the detailed profiler section.</p>
+
+<p>The end to end process is shown below.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QQNkttcAaYo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<p><strong>Future Work</strong></p>
+
+<ol>
+  <li>Support multiple AutoML Frameworks: Generalize the underlying functions to handle multiple AutoML frameworks including Auto-Sklearn, Auto-Keras, Auto-Gluon, Lucid and others.</li>
+  <li>Support multiple problem space: Extend the current problem space of regression and classification to time series and others</li>
+  <li>Performance: The looping over generations can be parallelized via a Dask Cluster.</li>
+  <li>Pause / Resume: Build the Pause / Resume functionality to allow the user to analyze mid-stream and determine if further processing is required or not.</li>
+  <li>Integration: Make the functionality available via the <a href="https://www.machineworksai.com">Machine Works</a> Platform</li>
+</ol>
+
+<p><strong>Credits</strong>: This work would not have been possible without the Open Source community (Dash by Plotly and TPOT). A special shout-out to the kind and enthusiastic folks at <a href="https://epistasislab.github.io/tpot/">Epistasis Labs</a> who quickly answered my questions on TPOT.</p>
+
+          </div>
+          <div class="article-share">
+            
+            
+            <a href="https://twitter.com/home?status=Visualizing+AutoML+Processes+with+AutoMLizer%20-%20https://augml.xyz/posts/automlizer%20by%20@Suprraja" title="Share on Twitter" rel="noreferrer noopener" target="_blank">
+              <svg viewBox="0 0 512 512"><path d="M492 109.5c-17.4 7.7-36 12.9-55.6 15.3 20-12 35.4-31 42.6-53.6 -18.7 11.1-39.4 19.2-61.5 23.5C399.8 75.8 374.6 64 346.8 64c-53.5 0-96.8 43.4-96.8 96.9 0 7.6 0.8 15 2.5 22.1 -80.5-4-151.9-42.6-199.6-101.3 -8.3 14.3-13.1 31-13.1 48.7 0 33.6 17.2 63.3 43.2 80.7C67 210.7 52 206.3 39 199c0 0.4 0 0.8 0 1.2 0 47 33.4 86.1 77.7 95 -8.1 2.2-16.7 3.4-25.5 3.4 -6.2 0-12.3-0.6-18.2-1.8 12.3 38.5 48.1 66.5 90.5 67.3 -33.1 26-74.9 41.5-120.3 41.5 -7.8 0-15.5-0.5-23.1-1.4C62.8 432 113.7 448 168.3 448 346.6 448 444 300.3 444 172.2c0-4.2-0.1-8.4-0.3-12.5C462.6 146 479 129 492 109.5z"/></svg>
+            </a>
+            <!--
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://augml.xyz/posts/automlizer" title="Share on Facebook" rel="noreferrer noopener" target="_blank">
+              <svg viewBox="0 0 512 512"><path d="M288 192v-38.1c0-17.2 3.8-25.9 30.5-25.9H352V64h-55.9c-68.5 0-91.1 31.4-91.1 85.3V192h-45v64h45v192h83V256h56.4l7.6-64H288z"/></svg>
+            </a> -->
+          </div>
+
+          
+        </article>
+        <footer class="footer scrollappear">
+  <p>
+    Obsidian Steel Copyright © 2019–2021. Theme is based on<a href="https://github.com/nielsenramon/chalk" target="_blank"</a> Chalk.
+  </p>
+</footer>
+
+      </div>
+    </div>
+  </main>
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143108295-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-143108295-2');
+  </script>
+
+
+<script src="/assets/vendor-1a8f6e33220f845e569c20b3c09a5d43f87908ea7168ea139ce2135770f7b1b5.js" type="text/javascript"></script>
+
+
+  <script src="/assets/webfonts-96493456d319d1bf419afdf8701552d4d486fee6afd304897d4fd81eb4e0cc0b.js" type="text/javascript"></script>
+
+
+
+  <script src="/assets/scrollappear-e2da8ea567e418637e31266cc5302126eaa79f62a2273739086358b589a89ee6.js" type="text/javascript"></script>
+
+
+<script src="/assets/application-cfde13ac81ddaf4351b2e739603e2baf688d0fcc9aba613fe62bbb1c7b037fb9.js" type="text/javascript"></script>
+
+
+</body>
+</html>

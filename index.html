@@ -1,36 +1,594 @@
----
-layout: default
-title: "Obsidian Steel"
-description: "Healthcare, Analytics and Sapiens"
----
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Obsidian Steel | Obsidian Steel</title>
+  <meta name="description" content="Healthcare, Analytics and Sapiens">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<ul class="article-list">
-  {% for post in paginator.posts %}
-    <li class="article-list-item {% if site.scrollappear_enabled %}scrollappear{% endif %}">
-      <a href="{{ post.url | relative_url }}" title="{{ post.title }}">
+  <meta property="og:title" content="Obsidian Steel">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://augml.xyz/">
+  <meta property="og:description" content="Healthcare, Analytics and Sapiens">
+  <meta property="og:site_name" content="Obsidian Steel">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="https://augml.xyz/">
+  <meta name="twitter:title" content="Obsidian Steel">
+  <meta name="twitter:description" content="Healthcare, Analytics and Sapiens">
+
+  
+    <meta property="og:image" content="https://augml.xyz/assets/og-image-ee46bbc61b334e821e81534b1fd43f3fee6f020ec174b3c2114445695fd48c01.jpg">
+    <meta name="twitter:image" content="https://augml.xyz/assets/og-image-ee46bbc61b334e821e81534b1fd43f3fee6f020ec174b3c2114445695fd48c01.jpg">
+  
+
+  <link href="https://augml.xyz/feed.xml" type="application/rss+xml" rel="alternate" title="Obsidian Steel Last 10 blog posts" />
+
+  
+
+  
+
+    
+      <link rel="icon" type="image/x-icon" href="/assets/favicon-light-22c205a680138d6ed7626a0c549bce2fa252eb358df80c69bcc3d2d5b2a9ee05.ico">
+      <link rel="apple-touch-icon" href="/assets/apple-touch-icon-light-72f711e49b77f9ed0a9f6d50b99de08cb0fea60e64860674aebdbe816362177f.png">
+      <link rel="stylesheet" type="text/css" href="/assets/light-b2cc845305e77df294c0cb054632d4a7919c46958174afe7bb179705a882022d.css">
+    
+
+  
+
+</head>
+
+<body>
+  <main>
+    <div class="grid grid-centered">
+      <div class="grid-cell">
+        <nav class="header-nav scrollappear">
+  <a href="/" class="header-logo" title="Obsidian Steel">Obsidian Steel</a>
+  <ul class="header-links">
+    
+      <li>
+        <a href="/about" title="About me">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-about">
+  <use href="/assets/about-ecf154b571ab8034ae00aeed91a3b7ad68db80b46d958753ad6216c919486e88.svg#icon-about" xlink:href="/assets/about-ecf154b571ab8034ae00aeed91a3b7ad68db80b46d958753ad6216c919486e88.svg#icon-about"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="https://twitter.com/Suprraja" rel="noreferrer noopener" target="_blank" title="Twitter">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-twitter">
+  <use href="/assets/twitter-8842c33965263ad1b03a978406826677a668f94125d5837e70ab83f24b3213a7.svg#icon-twitter" xlink:href="/assets/twitter-8842c33965263ad1b03a978406826677a668f94125d5837e70ab83f24b3213a7.svg#icon-twitter"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+      <li>
+        <a href="https://github.com/superaja" rel="noreferrer noopener" target="_blank" title="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-github">
+  <use href="/assets/github-094f81040819f34343ee6ffff0980f17e2807b08b595eaaf66ae3554934fd78d.svg#icon-github" xlink:href="/assets/github-094f81040819f34343ee6ffff0980f17e2807b08b595eaaf66ae3554934fd78d.svg#icon-github"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- My Site-->
+    
+      <li>
+        <a href="http://tc.0bsidiansteel.com" rel="noreferrer noopener" target="_blank" title="Tracking Cat">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-tc1">
+  <use href="/assets/tc1-15ecece0b41c5312a1012d3065b427cca87e57a603c1f786f8ef1ea07e8861fd.svg#icon-tc1" xlink:href="/assets/tc1-15ecece0b41c5312a1012d3065b427cca87e57a603c1f786f8ef1ea07e8861fd.svg#icon-tc1"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    <!-- End My Site-->
+    
+      <li>
+        <a href="/feed.xml" rel="noreferrer noopener" target="_blank" title="RSS">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-rss">
+  <use href="/assets/rss-541ec5cea9cefd10d2fcfec01888f3f231a8829940249835fa7b7b3a12ae0d0d.svg#icon-rss" xlink:href="/assets/rss-541ec5cea9cefd10d2fcfec01888f3f231a8829940249835fa7b7b3a12ae0d0d.svg#icon-rss"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+  </ul>
+</nav>
+
+
+
+        <ul class="article-list">
+  
+    <li class="article-list-item scrollappear">
+      <a href="/posts/changing-directions" title="Changing Obsidian Steel">
         <h5>
-          {{ post.title }}
-          {% include svg-icon.html icon="arrow-right" %}
+          Changing Obsidian Steel
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-arrow-right">
+  <use href="/assets/arrow-right-05feb9da52810d15348895a9a885c61803f4d2ae681b4fc442b285fef184dd2b.svg#icon-arrow-right" xlink:href="/assets/arrow-right-05feb9da52810d15348895a9a885c61803f4d2ae681b4fc442b285fef184dd2b.svg#icon-arrow-right"></use>
+</svg>
+
         </h5>
       </a>
       <p>
-        {% if post.description %}
-          {{ post.description }}  
-        {% else %}
-          {{ post.excerpt }}
-        {% endif %}
+        
+          In Brief: Change is evitable. This diary moving forward will focus purely on Data.  
+        
       </p>
-      {% include article/info-footer.html post=post %}
+      <div class="article-list-footer">
+  <span class="article-list-date">
+    November 4, 2022
+  </span>
+  <span class="article-list-divider">-</span>
+  <span class="article-list-minutes">
+    
+    
+      1 minute read
+    
+  </span>
+  <span class="article-list-divider">-</span>
+  <div class="article-list-tags">
+    
+      
+      <a href="/tag/misc" title="See all posts with tag 'Misc'">Misc</a>
+    
+      
+      <a href="/tag/web" title="See all posts with tag 'Web'">Web</a>
+    
+      
+      <a href="/tag/jekyll" title="See all posts with tag 'Jekyll'">Jekyll</a>
+    
+  </div>
+</div>
     </li>
-  {% endfor %}
-  {% if paginator.total_pages > 1 %}
-    <li class="article-pagination {% if site.settings.scrollappear_enabled %}scrollappear{% endif %}">
-      {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path }}" class="article-pagination-left">{% include svg-icon.html icon="arrow-left" %} Older posts</a>
-      {% endif %}
-      {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path }}" class="article-pagination-right">Newer posts {% include svg-icon.html icon="arrow-right" %}</a>
-      {% endif %}
+  
+    <li class="article-list-item scrollappear">
+      <a href="/posts/13f-analysis" title="The 13F Filings">
+        <h5>
+          The 13F Filings
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-arrow-right">
+  <use href="/assets/arrow-right-05feb9da52810d15348895a9a885c61803f4d2ae681b4fc442b285fef184dd2b.svg#icon-arrow-right" xlink:href="/assets/arrow-right-05feb9da52810d15348895a9a885c61803f4d2ae681b4fc442b285fef184dd2b.svg#icon-arrow-right"></use>
+</svg>
+
+        </h5>
+      </a>
+      <p>
+        
+          In Brief: 13F filings can provide good ideas for your investment portfolio. But they have their drawbacks - from the data quality of these submissions to what is (or not) included in these filings.I cover the high level solution description of extracting the 13f filings, processing the data, adding value added metrics and performing analytics.  
+        
+      </p>
+      <div class="article-list-footer">
+  <span class="article-list-date">
+    May 20, 2021
+  </span>
+  <span class="article-list-divider">-</span>
+  <span class="article-list-minutes">
+    
+    
+      5 minute read
+    
+  </span>
+  <span class="article-list-divider">-</span>
+  <div class="article-list-tags">
+    
+      
+      <a href="/tag/finance" title="See all posts with tag 'Finance'">Finance</a>
+    
+      
+      <a href="/tag/businessintelligence" title="See all posts with tag 'Businessintelligence'">Businessintelligence</a>
+    
+      
+      <a href="/tag/analytics" title="See all posts with tag 'Analytics'">Analytics</a>
+    
+  </div>
+</div>
     </li>
-  {% endif %}
+  
+    <li class="article-list-item scrollappear">
+      <a href="/posts/book-download" title="Downloading Freely Available Textbooks with Python">
+        <h5>
+          Downloading Freely Available Textbooks with Python
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-arrow-right">
+  <use href="/assets/arrow-right-05feb9da52810d15348895a9a885c61803f4d2ae681b4fc442b285fef184dd2b.svg#icon-arrow-right" xlink:href="/assets/arrow-right-05feb9da52810d15348895a9a885c61803f4d2ae681b4fc442b285fef184dd2b.svg#icon-arrow-right"></use>
+</svg>
+
+        </h5>
+      </a>
+      <p>
+        
+          Springer Link made their coveted text books available for download. A simple code to download them using python web-scraping libraries  
+        
+      </p>
+      <div class="article-list-footer">
+  <span class="article-list-date">
+    May 13, 2020
+  </span>
+  <span class="article-list-divider">-</span>
+  <span class="article-list-minutes">
+    
+    
+      3 minute read
+    
+  </span>
+  <span class="article-list-divider">-</span>
+  <div class="article-list-tags">
+    
+      
+      <a href="/tag/misc" title="See all posts with tag 'Misc'">Misc</a>
+    
+      
+      <a href="/tag/coding" title="See all posts with tag ''"></a>
+    
+  </div>
+</div>
+    </li>
+  
+    <li class="article-list-item scrollappear">
+      <a href="/posts/covid19" title="Tracking Covid19 - An Analytical Record">
+        <h5>
+          Tracking Covid19 - An Analytical Record
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-arrow-right">
+  <use href="/assets/arrow-right-05feb9da52810d15348895a9a885c61803f4d2ae681b4fc442b285fef184dd2b.svg#icon-arrow-right" xlink:href="/assets/arrow-right-05feb9da52810d15348895a9a885c61803f4d2ae681b4fc442b285fef184dd2b.svg#icon-arrow-right"></use>
+</svg>
+
+        </h5>
+      </a>
+      <p>
+        
+          This is probably the first time in history that the entire world is tackling a singular problem created by an invisible enemy. I am recording my work in this blog while following social-distancing. Many folks are doing some great data work on tracking covid19 and its impact. I will link their work here.  
+        
+      </p>
+      <div class="article-list-footer">
+  <span class="article-list-date">
+    April 15, 2020
+  </span>
+  <span class="article-list-divider">-</span>
+  <span class="article-list-minutes">
+    
+    
+      9 minute read
+    
+  </span>
+  <span class="article-list-divider">-</span>
+  <div class="article-list-tags">
+    
+      
+      <a href="/tag/analytics" title="See all posts with tag 'Analytics'">Analytics</a>
+    
+      
+      <a href="/tag/healthcare" title="See all posts with tag 'Healthcare'">Healthcare</a>
+    
+  </div>
+</div>
+    </li>
+  
+    <li class="article-list-item scrollappear">
+      <a href="/posts/be-responsible-for-models" title="538 talks from both side of the mouth">
+        <h5>
+          538 talks from both side of the mouth
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-arrow-right">
+  <use href="/assets/arrow-right-05feb9da52810d15348895a9a885c61803f4d2ae681b4fc442b285fef184dd2b.svg#icon-arrow-right" xlink:href="/assets/arrow-right-05feb9da52810d15348895a9a885c61803f4d2ae681b4fc442b285fef184dd2b.svg#icon-arrow-right"></use>
+</svg>
+
+        </h5>
+      </a>
+      <p>
+        
+          Issac Faber's analysis on the Silver vs. Taleb Twitter war  
+        
+      </p>
+      <div class="article-list-footer">
+  <span class="article-list-date">
+    April 13, 2020
+  </span>
+  <span class="article-list-divider">-</span>
+  <span class="article-list-minutes">
+    
+    
+      3 minute read
+    
+  </span>
+  <span class="article-list-divider">-</span>
+  <div class="article-list-tags">
+    
+      
+      <a href="/tag/analytics" title="See all posts with tag 'Analytics'">Analytics</a>
+    
+  </div>
+</div>
+    </li>
+  
+    <li class="article-list-item scrollappear">
+      <a href="/posts/how-the-pandamic-will-end" title="How the Pandemic Will End">
+        <h5>
+          How the Pandemic Will End
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-arrow-right">
+  <use href="/assets/arrow-right-05feb9da52810d15348895a9a885c61803f4d2ae681b4fc442b285fef184dd2b.svg#icon-arrow-right" xlink:href="/assets/arrow-right-05feb9da52810d15348895a9a885c61803f4d2ae681b4fc442b285fef184dd2b.svg#icon-arrow-right"></use>
+</svg>
+
+        </h5>
+      </a>
+      <p>
+        
+          A sobering thought provoking article on how the covid19 pandemic MAY end  
+        
+      </p>
+      <div class="article-list-footer">
+  <span class="article-list-date">
+    March 27, 2020
+  </span>
+  <span class="article-list-divider">-</span>
+  <span class="article-list-minutes">
+    
+    
+      1 minute read
+    
+  </span>
+  <span class="article-list-divider">-</span>
+  <div class="article-list-tags">
+    
+      
+      <a href="/tag/healthcare" title="See all posts with tag 'Healthcare'">Healthcare</a>
+    
+  </div>
+</div>
+    </li>
+  
+    <li class="article-list-item scrollappear">
+      <a href="/posts/history-in-crisis" title="History In Crisis - Lessons from COVID-19">
+        <h5>
+          History In Crisis - Lessons from COVID-19
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-arrow-right">
+  <use href="/assets/arrow-right-05feb9da52810d15348895a9a885c61803f4d2ae681b4fc442b285fef184dd2b.svg#icon-arrow-right" xlink:href="/assets/arrow-right-05feb9da52810d15348895a9a885c61803f4d2ae681b4fc442b285fef184dd2b.svg#icon-arrow-right"></use>
+</svg>
+
+        </h5>
+      </a>
+      <p>
+        
+          David S.Jones excellent perspective in New England Journal of Medicine providing a historical perspective on how people react to epidemics  
+        
+      </p>
+      <div class="article-list-footer">
+  <span class="article-list-date">
+    March 25, 2020
+  </span>
+  <span class="article-list-divider">-</span>
+  <span class="article-list-minutes">
+    
+    
+      2 minute read
+    
+  </span>
+  <span class="article-list-divider">-</span>
+  <div class="article-list-tags">
+    
+      
+      <a href="/tag/healthcare" title="See all posts with tag 'Healthcare'">Healthcare</a>
+    
+  </div>
+</div>
+    </li>
+  
+    <li class="article-list-item scrollappear">
+      <a href="/posts/automlizer" title="Visualizing AutoML Processes with AutoMLizer">
+        <h5>
+          Visualizing AutoML Processes with AutoMLizer
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-arrow-right">
+  <use href="/assets/arrow-right-05feb9da52810d15348895a9a885c61803f4d2ae681b4fc442b285fef184dd2b.svg#icon-arrow-right" xlink:href="/assets/arrow-right-05feb9da52810d15348895a9a885c61803f4d2ae681b4fc442b285fef184dd2b.svg#icon-arrow-right"></use>
+</svg>
+
+        </h5>
+      </a>
+      <p>
+        
+          Opening the covers of these black box systems to understand the inner workings is the step in the right direction for greater transparency. AutoMLizer helps in this regard by providing a mechanism to understand in real-time the progress of the AutoML system and get deeper visual insights on the decisions of the AutoML  
+        
+      </p>
+      <div class="article-list-footer">
+  <span class="article-list-date">
+    February 26, 2020
+  </span>
+  <span class="article-list-divider">-</span>
+  <span class="article-list-minutes">
+    
+    
+      6 minute read
+    
+  </span>
+  <span class="article-list-divider">-</span>
+  <div class="article-list-tags">
+    
+      
+      <a href="/tag/realtime" title="See all posts with tag 'Realtime'">Realtime</a>
+    
+      
+      <a href="/tag/analytics" title="See all posts with tag 'Analytics'">Analytics</a>
+    
+      
+      <a href="/tag/ml" title="See all posts with tag 'ML'">ML</a>
+    
+  </div>
+</div>
+    </li>
+  
+    <li class="article-list-item scrollappear">
+      <a href="/posts/epic-sellout" title="Epic Sellout">
+        <h5>
+          Epic Sellout
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-arrow-right">
+  <use href="/assets/arrow-right-05feb9da52810d15348895a9a885c61803f4d2ae681b4fc442b285fef184dd2b.svg#icon-arrow-right" xlink:href="/assets/arrow-right-05feb9da52810d15348895a9a885c61803f4d2ae681b4fc442b285fef184dd2b.svg#icon-arrow-right"></use>
+</svg>
+
+        </h5>
+      </a>
+      <p>
+        
+          Epic System's CEO and some of the nation's 60 hospital systems have signed a letter opposing the HHS rule that would make it easier for patients to get their healthcare records and increase interoperability through APIs.  
+        
+      </p>
+      <div class="article-list-footer">
+  <span class="article-list-date">
+    February 6, 2020
+  </span>
+  <span class="article-list-divider">-</span>
+  <span class="article-list-minutes">
+    
+    
+      1 minute read
+    
+  </span>
+  <span class="article-list-divider">-</span>
+  <div class="article-list-tags">
+    
+      
+      <a href="/tag/healthcare" title="See all posts with tag 'Healthcare'">Healthcare</a>
+    
+  </div>
+</div>
+    </li>
+  
+    <li class="article-list-item scrollappear">
+      <a href="/posts/fun-with-year-progress" title="Year Progress">
+        <h5>
+          Year Progress
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-arrow-right">
+  <use href="/assets/arrow-right-05feb9da52810d15348895a9a885c61803f4d2ae681b4fc442b285fef184dd2b.svg#icon-arrow-right" xlink:href="/assets/arrow-right-05feb9da52810d15348895a9a885c61803f4d2ae681b4fc442b285fef184dd2b.svg#icon-arrow-right"></use>
+</svg>
+
+        </h5>
+      </a>
+      <p>
+        
+          Applications for realtime analytics are not easy to build. But one way to master is to build simple applications. I used the Time functions and the magic of Live Updates in Dash to get this one going  
+        
+      </p>
+      <div class="article-list-footer">
+  <span class="article-list-date">
+    January 30, 2020
+  </span>
+  <span class="article-list-divider">-</span>
+  <span class="article-list-minutes">
+    
+    
+      1 minute read
+    
+  </span>
+  <span class="article-list-divider">-</span>
+  <div class="article-list-tags">
+    
+      
+      <a href="/tag/realtime" title="See all posts with tag 'Realtime'">Realtime</a>
+    
+      
+      <a href="/tag/analytics" title="See all posts with tag 'Analytics'">Analytics</a>
+    
+  </div>
+</div>
+    </li>
+  
+    <li class="article-list-item scrollappear">
+      <a href="/posts/introducing-os" title="Introducing Obsidian Steel">
+        <h5>
+          Introducing Obsidian Steel
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-arrow-right">
+  <use href="/assets/arrow-right-05feb9da52810d15348895a9a885c61803f4d2ae681b4fc442b285fef184dd2b.svg#icon-arrow-right" xlink:href="/assets/arrow-right-05feb9da52810d15348895a9a885c61803f4d2ae681b4fc442b285fef184dd2b.svg#icon-arrow-right"></use>
+</svg>
+
+        </h5>
+      </a>
+      <p>
+        
+          Healthcare, Analytics  
+        
+      </p>
+      <div class="article-list-footer">
+  <span class="article-list-date">
+    January 24, 2019
+  </span>
+  <span class="article-list-divider">-</span>
+  <span class="article-list-minutes">
+    
+    
+      1 minute read
+    
+  </span>
+  <span class="article-list-divider">-</span>
+  <div class="article-list-tags">
+    
+      
+      <a href="/tag/misc" title="See all posts with tag 'Misc'">Misc</a>
+    
+      
+      <a href="/tag/web" title="See all posts with tag 'Web'">Web</a>
+    
+      
+      <a href="/tag/jekyll" title="See all posts with tag 'Jekyll'">Jekyll</a>
+    
+  </div>
+</div>
+    </li>
+  
+  
 </ul>
+
+        <footer class="footer scrollappear">
+  <p>
+    Obsidian Steel Copyright © 2019–2021. Theme is based on<a href="https://github.com/nielsenramon/chalk" target="_blank"</a> Chalk.
+  </p>
+</footer>
+
+      </div>
+    </div>
+  </main>
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143108295-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-143108295-2');
+  </script>
+
+
+<script src="/assets/vendor-1a8f6e33220f845e569c20b3c09a5d43f87908ea7168ea139ce2135770f7b1b5.js" type="text/javascript"></script>
+
+
+  <script src="/assets/webfonts-96493456d319d1bf419afdf8701552d4d486fee6afd304897d4fd81eb4e0cc0b.js" type="text/javascript"></script>
+
+
+
+  <script src="/assets/scrollappear-e2da8ea567e418637e31266cc5302126eaa79f62a2273739086358b589a89ee6.js" type="text/javascript"></script>
+
+
+<script src="/assets/application-cfde13ac81ddaf4351b2e739603e2baf688d0fcc9aba613fe62bbb1c7b037fb9.js" type="text/javascript"></script>
+
+
+</body>
+</html>

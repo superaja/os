@@ -1,20 +1,90 @@
----
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="https://www.w3.org/2005/Atom" xmlns:dc="https://purl.org/dc/elements/1.1/">
   <channel>
-    <title>{{ site.name | xml_escape }}</title>
-    <description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
-    <link>{{ site.url }}</link>
-    <atom:link href="{{ page.path | absolute_url }}" rel="self" type="application/rss+xml" />
-    {% for post in site.posts limit:10 %}
+    <title>Obsidian Steel</title>
+    <description></description>
+    <link>https://augml.xyz</link>
+    <atom:link href="https://augml.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.description | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | absolute_url }}</link>
-        <guid isPermaLink="true">{{ post.url | absolute_url }}</guid>
+        <title>Changing Obsidian Steel</title>
+        <description>In Brief: Change is evitable. This diary moving forward will focus purely on Data.</description>
+        <pubDate>Fri, 04 Nov 2022 00:00:00 -0400</pubDate>
+        <link>https://augml.xyz/posts/changing-directions</link>
+        <guid isPermaLink="true">https://augml.xyz/posts/changing-directions</guid>
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>The 13F Filings</title>
+        <description>In Brief: 13F filings can provide good ideas for your investment portfolio. But they have their drawbacks - from the data quality of these submissions to what is (or not) included in these filings.I cover the high level solution description of extracting the 13f filings, processing the data, adding value added metrics and performing analytics.</description>
+        <pubDate>Thu, 20 May 2021 00:00:00 -0400</pubDate>
+        <link>https://augml.xyz/posts/13f-analysis</link>
+        <guid isPermaLink="true">https://augml.xyz/posts/13f-analysis</guid>
+      </item>
+    
+      <item>
+        <title>Downloading Freely Available Textbooks with Python</title>
+        <description>Springer Link made their coveted text books available for download. A simple code to download them using python web-scraping libraries</description>
+        <pubDate>Wed, 13 May 2020 00:00:00 -0400</pubDate>
+        <link>https://augml.xyz/posts/book-download</link>
+        <guid isPermaLink="true">https://augml.xyz/posts/book-download</guid>
+      </item>
+    
+      <item>
+        <title>Tracking Covid19 - An Analytical Record</title>
+        <description>This is probably the first time in history that the entire world is tackling a singular problem created by an invisible enemy. I am recording my work in this blog while following social-distancing. Many folks are doing some great data work on tracking covid19 and its impact. I will link their work here.</description>
+        <pubDate>Wed, 15 Apr 2020 00:00:00 -0400</pubDate>
+        <link>https://augml.xyz/posts/covid19</link>
+        <guid isPermaLink="true">https://augml.xyz/posts/covid19</guid>
+      </item>
+    
+      <item>
+        <title>538 talks from both side of the mouth</title>
+        <description>Issac Faber's analysis on the Silver vs. Taleb Twitter war</description>
+        <pubDate>Mon, 13 Apr 2020 00:00:00 -0400</pubDate>
+        <link>https://augml.xyz/posts/be-responsible-for-models</link>
+        <guid isPermaLink="true">https://augml.xyz/posts/be-responsible-for-models</guid>
+      </item>
+    
+      <item>
+        <title>How the Pandemic Will End</title>
+        <description>A sobering thought provoking article on how the covid19 pandemic MAY end</description>
+        <pubDate>Fri, 27 Mar 2020 00:00:00 -0400</pubDate>
+        <link>https://augml.xyz/posts/how-the-pandamic-will-end</link>
+        <guid isPermaLink="true">https://augml.xyz/posts/how-the-pandamic-will-end</guid>
+      </item>
+    
+      <item>
+        <title>History In Crisis - Lessons from COVID-19</title>
+        <description>David S.Jones excellent perspective in New England Journal of Medicine providing a historical perspective on how people react to epidemics</description>
+        <pubDate>Wed, 25 Mar 2020 00:00:00 -0400</pubDate>
+        <link>https://augml.xyz/posts/history-in-crisis</link>
+        <guid isPermaLink="true">https://augml.xyz/posts/history-in-crisis</guid>
+      </item>
+    
+      <item>
+        <title>Visualizing AutoML Processes with AutoMLizer</title>
+        <description>Opening the covers of these black box systems to understand the inner workings is the step in the right direction for greater transparency. AutoMLizer helps in this regard by providing a mechanism to understand in real-time the progress of the AutoML system and get deeper visual insights on the decisions of the AutoML</description>
+        <pubDate>Wed, 26 Feb 2020 00:00:00 -0500</pubDate>
+        <link>https://augml.xyz/posts/automlizer</link>
+        <guid isPermaLink="true">https://augml.xyz/posts/automlizer</guid>
+      </item>
+    
+      <item>
+        <title>Epic Sellout</title>
+        <description>Epic System's CEO and some of the nation's 60 hospital systems have signed a letter opposing the HHS rule that would make it easier for patients to get their healthcare records and increase interoperability through APIs.</description>
+        <pubDate>Thu, 06 Feb 2020 00:00:00 -0500</pubDate>
+        <link>https://augml.xyz/posts/epic-sellout</link>
+        <guid isPermaLink="true">https://augml.xyz/posts/epic-sellout</guid>
+      </item>
+    
+      <item>
+        <title>Year Progress</title>
+        <description>Applications for realtime analytics are not easy to build. But one way to master is to build simple applications. I used the Time functions and the magic of Live Updates in Dash to get this one going</description>
+        <pubDate>Thu, 30 Jan 2020 00:00:00 -0500</pubDate>
+        <link>https://augml.xyz/posts/fun-with-year-progress</link>
+        <guid isPermaLink="true">https://augml.xyz/posts/fun-with-year-progress</guid>
+      </item>
+    
   </channel>
 </rss>

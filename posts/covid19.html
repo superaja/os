@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Obsidian Steel | Tracking Covid19 - An Analytical Record</title>
+  <meta name="description" content="This is probably the first time in history that the entire world is tackling a singular problem created by an invisible enemy. I am recording my work in this blog while following social-distancing. Many folks are doing some great data work on tracking covid19 and its impact. I will link their work here.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="Tracking Covid19 - An Analytical Record">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://augml.xyz/posts/covid19">
+  <meta property="og:description" content="This is probably the first time in history that the entire world is tackling a singular problem created by an invisible enemy. I am recording my work in this blog while following social-distancing. Many folks are doing some great data work on tracking covid19 and its impact. I will link their work here.">
+  <meta property="og:site_name" content="Obsidian Steel">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="https://augml.xyz/posts/covid19">
+  <meta name="twitter:title" content="Tracking Covid19 - An Analytical Record">
+  <meta name="twitter:description" content="This is probably the first time in history that the entire world is tackling a singular problem created by an invisible enemy. I am recording my work in this blog while following social-distancing. Many folks are doing some great data work on tracking covid19 and its impact. I will link their work here.">
+
+  
+    
+      <meta property="og:image" content="https://augml.xyz/assets/oslogo-c6d880df930358b871752234dce5a6ee55965d57422cee3aac2b7244bacf525d.png">
+      <meta name="twitter:image" content="https://augml.xyz/assets/oslogo-c6d880df930358b871752234dce5a6ee55965d57422cee3aac2b7244bacf525d.png">
+    
+  
+
+  <link href="https://augml.xyz/feed.xml" type="application/rss+xml" rel="alternate" title="Obsidian Steel Last 10 blog posts" />
+
+  
+
+  
+
+    
+      <link rel="icon" type="image/x-icon" href="/assets/favicon-light-22c205a680138d6ed7626a0c549bce2fa252eb358df80c69bcc3d2d5b2a9ee05.ico">
+      <link rel="apple-touch-icon" href="/assets/apple-touch-icon-light-72f711e49b77f9ed0a9f6d50b99de08cb0fea60e64860674aebdbe816362177f.png">
+      <link rel="stylesheet" type="text/css" href="/assets/light-b2cc845305e77df294c0cb054632d4a7919c46958174afe7bb179705a882022d.css">
+    
+
+  
+
+</head>
+
+<body>
+  <main>
+    <div class="grid grid-centered">
+      <div class="grid-cell">
+        <nav class="header-nav scrollappear">
+  <a href="/" class="header-logo" title="Obsidian Steel">Obsidian Steel</a>
+  <ul class="header-links">
+    
+      <li>
+        <a href="/about" title="About me">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-about">
+  <use href="/assets/about-ecf154b571ab8034ae00aeed91a3b7ad68db80b46d958753ad6216c919486e88.svg#icon-about" xlink:href="/assets/about-ecf154b571ab8034ae00aeed91a3b7ad68db80b46d958753ad6216c919486e88.svg#icon-about"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="https://twitter.com/Suprraja" rel="noreferrer noopener" target="_blank" title="Twitter">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-twitter">
+  <use href="/assets/twitter-8842c33965263ad1b03a978406826677a668f94125d5837e70ab83f24b3213a7.svg#icon-twitter" xlink:href="/assets/twitter-8842c33965263ad1b03a978406826677a668f94125d5837e70ab83f24b3213a7.svg#icon-twitter"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+      <li>
+        <a href="https://github.com/superaja" rel="noreferrer noopener" target="_blank" title="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-github">
+  <use href="/assets/github-094f81040819f34343ee6ffff0980f17e2807b08b595eaaf66ae3554934fd78d.svg#icon-github" xlink:href="/assets/github-094f81040819f34343ee6ffff0980f17e2807b08b595eaaf66ae3554934fd78d.svg#icon-github"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- My Site-->
+    
+      <li>
+        <a href="http://tc.0bsidiansteel.com" rel="noreferrer noopener" target="_blank" title="Tracking Cat">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-tc1">
+  <use href="/assets/tc1-15ecece0b41c5312a1012d3065b427cca87e57a603c1f786f8ef1ea07e8861fd.svg#icon-tc1" xlink:href="/assets/tc1-15ecece0b41c5312a1012d3065b427cca87e57a603c1f786f8ef1ea07e8861fd.svg#icon-tc1"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    <!-- End My Site-->
+    
+      <li>
+        <a href="/feed.xml" rel="noreferrer noopener" target="_blank" title="RSS">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-rss">
+  <use href="/assets/rss-541ec5cea9cefd10d2fcfec01888f3f231a8829940249835fa7b7b3a12ae0d0d.svg#icon-rss" xlink:href="/assets/rss-541ec5cea9cefd10d2fcfec01888f3f231a8829940249835fa7b7b3a12ae0d0d.svg#icon-rss"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+  </ul>
+</nav>
+
+
+
+        <article class="article scrollappear">
+          <header class="article-header">
+            <h1>Tracking Covid19 - An Analytical Record</h1>
+            <p>This is probably the first time in history that the entire world is tackling a singular problem created by an invisible enemy. I am recording my work in this blog while following social-distancing. Many folks are doing some great data work on tracking covid19 and its impact. I will link their work here.</p>
+            <div class="article-list-footer">
+  <span class="article-list-date">
+    April 15, 2020
+  </span>
+  <span class="article-list-divider">-</span>
+  <span class="article-list-minutes">
+    
+    
+      9 minute read
+    
+  </span>
+  <span class="article-list-divider">-</span>
+  <div class="article-list-tags">
+    
+      
+      <a href="/tag/analytics" title="See all posts with tag 'Analytics'">Analytics</a>
+    
+      
+      <a href="/tag/healthcare" title="See all posts with tag 'Healthcare'">Healthcare</a>
+    
+  </div>
+</div>
+          </header>
+
+          <div class="article-content">
+            <p>Read the start of the blog <a href="#COVID19">here</a></p>
+
+<p><strong>Update: 15th April 2020</strong></p>
+
+<p>Looking at this week’s data, there is both positive and negative trends in terms of the disease progression. We have finally crossed the peak and trending down in terms of confirmed cases. The United States has now also become the country with the highest number of deaths.</p>
+
+<p>This update is also my last one. Thinking about these charts is humbling. Behind each of these numbers whether it is confirmed or Death, there are human beings like you and me - Somebody’s father, somebody’s mother, spouse or friend. While we see some positive downward trends, this pandemic has disrupted our lives in a highly profound negative way. We have paid dearly. There is no positive light here. The best thing we can do from this experience is to learn from it and put the right policy and leadership in place so that we are better prepared the next time. Yes, there is a next time. Its not a question of If but When.</p>
+
+<p><em>US Testing</em></p>
+
+<p>South Korea as of 6th April has <a href="https://ourworldindata.org/covid-testing#south-korea" target="_blank">tested 10 out of every 1000 people</a> or roughly <strong>1 in 100 people</strong>.</p>
+
+<p>As compared to that the US has tested greater than 3M people with a population of 331M, we are testing roughly 9 people for every 1000 or around <strong>1 in 102 people</strong>. This is signifant improvement in terms of testing numbers given the <a href="https://www.goodrx.com/blog/drive-thru-coronavirus-testing-near-me/" target="_blank">widespread availability</a> of these tests. There are still challenges on how quickly the results are available.</p>
+
+<p><em>Daily US Testing</em></p>
+
+<p><a href="/assets/covid19/us-daily-testing-4-16-0ff50c3e565df287d7bf2db4bab8ab804dea4b70c171c13a9d83957d0bb16c94.png">
+  <img src="/assets/covid19/us-daily-testing-4-16-0ff50c3e565df287d7bf2db4bab8ab804dea4b70c171c13a9d83957d0bb16c94.png" alt="Daily US Testing" class="zooming" data-rjs="/assets/covid19/us-daily-testing-4-16-0ff50c3e565df287d7bf2db4bab8ab804dea4b70c171c13a9d83957d0bb16c94.png" data-zooming-width="1478" data-zooming-height="485" />
+</a></p>
+
+<p><em>The top…</em></p>
+
+<p><a href="/assets/covid19/state-testing-top-4-16-ae2235861f6f21def4039db696bbf3391c39752c3ab770fc321077f40b65fd5d.png">
+  <img src="/assets/covid19/state-testing-top-4-16-ae2235861f6f21def4039db696bbf3391c39752c3ab770fc321077f40b65fd5d.png" alt="State Testing Top 10" class="zooming" data-rjs="/assets/covid19/state-testing-top-4-16-ae2235861f6f21def4039db696bbf3391c39752c3ab770fc321077f40b65fd5d.png" data-zooming-width="1450" data-zooming-height="482" />
+</a></p>
+
+<p><em>..and the bottom.</em></p>
+
+<p><a href="/assets/covid19/state-testing-bottom-4-16-0b1f4f0834568606148f9c0a294701a84d25f9604653b5eee0d100393cd0280b.png">
+  <img src="/assets/covid19/state-testing-bottom-4-16-0b1f4f0834568606148f9c0a294701a84d25f9604653b5eee0d100393cd0280b.png" alt="State Testing Bottom 10" class="zooming" data-rjs="/assets/covid19/state-testing-bottom-4-16-0b1f4f0834568606148f9c0a294701a84d25f9604653b5eee0d100393cd0280b.png" data-zooming-width="1451" data-zooming-height="470" />
+</a></p>
+
+<p>The surprise here is California (negatively) with an abyssmal rate of 5 tests per 1000 and Louisiana (positively) who is at 26 tests per 1000.</p>
+
+<p><em>Hospitalization</em></p>
+
+<p><a href="/assets/covid19/hospitalization-4-16-5cf588a387501af4d86da2667e90e0e1ebc4cc1bb3171b38e8c36d6f1a79cacc.png">
+  <img src="/assets/covid19/hospitalization-4-16-5cf588a387501af4d86da2667e90e0e1ebc4cc1bb3171b38e8c36d6f1a79cacc.png" alt="Hospitalizations in the US" class="zooming" data-rjs="/assets/covid19/hospitalization-4-16-5cf588a387501af4d86da2667e90e0e1ebc4cc1bb3171b38e8c36d6f1a79cacc.png" data-zooming-width="1441" data-zooming-height="460" />
+</a></p>
+
+<p><em>Confirmed Case Tracker</em></p>
+
+<p><a href="/assets/covid19/confirmed-log-4-16-8a15daa6cca00d4fb64d09498fe633cf703ca37273fb87f58ebb51268402ef2c.png">
+  <img src="/assets/covid19/confirmed-log-4-16-8a15daa6cca00d4fb64d09498fe633cf703ca37273fb87f58ebb51268402ef2c.png" alt="Confirmed Case Tracker" class="zooming" data-rjs="/assets/covid19/confirmed-log-4-16-8a15daa6cca00d4fb64d09498fe633cf703ca37273fb87f58ebb51268402ef2c.png" data-zooming-width="1562" data-zooming-height="485" />
+</a></p>
+
+<p>This is now become a US and Europe dominated disease.</p>
+
+<p><em>Daily Confirmed Cases</em></p>
+
+<p><a href="/assets/covid19/daily-confirmed-4-16-5a5c7425551e8513c95c60cb7195a890196d8de41d7327cdf15bcea52b1c51f1.png">
+  <img src="/assets/covid19/daily-confirmed-4-16-5a5c7425551e8513c95c60cb7195a890196d8de41d7327cdf15bcea52b1c51f1.png" alt="Confirmed Case Tracker" class="zooming" data-rjs="/assets/covid19/daily-confirmed-4-16-5a5c7425551e8513c95c60cb7195a890196d8de41d7327cdf15bcea52b1c51f1.png" data-zooming-width="1595" data-zooming-height="479" />
+</a></p>
+
+<p>Cases in US, Italy and Spain have either peaked or towards a downward trend.</p>
+
+<p><em>Percent of Recovered, Mortality and Yet to Recover by key affected countries</em></p>
+
+<p><a href="/assets/covid19/percent-4-16-d5068c63d5cad5c93908a7d09462b8dffb919e1c45268c7f0fcc098f82863282.png">
+  <img src="/assets/covid19/percent-4-16-d5068c63d5cad5c93908a7d09462b8dffb919e1c45268c7f0fcc098f82863282.png" alt="Percent Recovered" class="zooming" data-rjs="/assets/covid19/percent-4-16-d5068c63d5cad5c93908a7d09462b8dffb919e1c45268c7f0fcc098f82863282.png" data-zooming-width="1574" data-zooming-height="441" />
+</a></p>
+
+<p>Mortality is in double digits for Italy, Spain and United Kingdom.</p>
+
+<p><a href="/assets/covid19/top-10-4-16-4e9028e888e71e00549c526edd465d1df22212e4d9f1bb65a4a3c1312858da4a.png">
+  <img src="/assets/covid19/top-10-4-16-4e9028e888e71e00549c526edd465d1df22212e4d9f1bb65a4a3c1312858da4a.png" alt="Percent Recovered" class="zooming" data-rjs="/assets/covid19/top-10-4-16-4e9028e888e71e00549c526edd465d1df22212e4d9f1bb65a4a3c1312858da4a.png" data-zooming-width="671" data-zooming-height="291" />
+</a></p>
+
+<p><em>US State Tracker</em></p>
+
+<p><a href="/assets/covid19/state-confirmed-log-4-16-fe43d3714771c863a8c487f81badea4d4e85324dcad54df49170920bab7307ad.png">
+  <img src="/assets/covid19/state-confirmed-log-4-16-fe43d3714771c863a8c487f81badea4d4e85324dcad54df49170920bab7307ad.png" alt="State Tracker" class="zooming" data-rjs="/assets/covid19/state-confirmed-log-4-16-fe43d3714771c863a8c487f81badea4d4e85324dcad54df49170920bab7307ad.png" data-zooming-width="1585" data-zooming-height="471" />
+</a></p>
+
+<p>New York (especially NYC) is the <a href="https://www.nytimes.com/2020/03/22/nyregion/Coronavirus-new-York-epicenter.html">epicenter for the US</a> and has become the epicenter of the world with <strong>202208</strong> confirmed cases and a mortality rate that jumped to <strong>5.3%</strong> from <strong>3.6%</strong>. For daily report <a href="https://www1.nyc.gov/site/doh/covid/covid-19-data.page#download" target="_blank">see.</a>.</p>
+
+<p><a href="/assets/covid19/state-rates-4-16-9c8957af54f7db098aef413a6e03188f9976a5277c2cb69035f63b725dfa2b27.png">
+  <img src="/assets/covid19/state-rates-4-16-9c8957af54f7db098aef413a6e03188f9976a5277c2cb69035f63b725dfa2b27.png" alt="State Tracker" class="zooming" data-rjs="/assets/covid19/state-rates-4-16-9c8957af54f7db098aef413a6e03188f9976a5277c2cb69035f63b725dfa2b27.png" data-zooming-width="1580" data-zooming-height="406" />
+</a></p>
+
+<p>This chart is from a subset of data that filters the top 10 states confirmed cases in the US.</p>
+
+<p>Here <code class="highlighter-rouge">% Confirmed</code> is defined as the <code class="highlighter-rouge">State confirmed cases / Total confirmed cases in the US</code> and <code class="highlighter-rouge">Mortality</code> is defined as <code class="highlighter-rouge">State Deaths / State Confirmed Cases </code></p>
+
+<p>New York, New Jersey, Mass and Michigan make the top 4 of confirmed cases in the US.</p>
+
+<p><strong>Update: 7th April 2020</strong></p>
+
+<ol>
+  <li>Added Testing and Hospitalization</li>
+  <li>Updated Statistics</li>
+  <li>Note: <a href="https://www.nytimes.com/2020/04/02/us/politics/cia-coronavirus-china.html">China vastly understated the impact of the pandemic</a> and hence any comparison to the data from China is not really valid. In the upcoming weeks, I will remove this data till credibility is established.</li>
+</ol>
+
+<p><strong>Analysis</strong></p>
+
+<p><strong>Testing</strong>: Recently there have been flurry of reports on the status of <a href="https://www.washingtonpost.com/health/2020/03/27/coronavirus-testing-us/{:target=&quot;_blank&quot;}">US Testing</a> and general misinformation and comparison to South Korea whose <a href="https://www.cnbc.com/2020/04/07/coronavirus-south-korea-testing-could-flatten-pandemic-curve-in-us-areas.html">test and trace program</a> without shutting down the economy has made it an epitome on pandemic management. Data indicates that even though we are doing more test than South Korea, we are actually behind in terms of per capita which is really the metric we need to be looking at. This is primarily due to the asymptomatic nature of the infection spreading. A widespread test &amp; trace and <a href="https://twitter.com/search?q=%23Masks4All&amp;src=typeahead_click">#Masks4All</a> is the only way to get the economy started while bending the curve.</p>
+
+<p><em>US Testing</em></p>
+
+<p>Let us start with the benchmark. South Korea as of 6th April has <a href="https://ourworldindata.org/covid-testing#south-korea" target="_blank">tested 466,804</a> of their population of 51,269,185. This means they are testing 9 people out of every 1000 or roughly <strong>1 in 111 people</strong>.</p>
+
+<p>As compared to that the US has tested slightly greater than 2M people but with a population of 331M, we are testing roughly 6 people for every 1000 or around <strong>1 in 161 people</strong>.</p>
+
+<p><em>Daily US Testing</em></p>
+
+<p><a href="/assets/covid19/us-daily-testing-4-7-b58282bbd5fd5c147aa97d146b8111c93b4264807136331df4ab8b9c658923a7.png">
+  <img src="/assets/covid19/us-daily-testing-4-7-b58282bbd5fd5c147aa97d146b8111c93b4264807136331df4ab8b9c658923a7.png" alt="Daily US Testing" class="zooming" data-rjs="/assets/covid19/us-daily-testing-4-7-b58282bbd5fd5c147aa97d146b8111c93b4264807136331df4ab8b9c658923a7.png" data-zooming-width="1022" data-zooming-height="503" />
+</a></p>
+
+<p>The spike seen here is due to <a href="https://www.mercurynews.com/2020/04/06/coronavirus-california-cases-top-15000-testing-backlog-begins-to-clear/" target="_blank">California backlog that were cleared</a></p>
+
+<p><em>The top…</em></p>
+
+<p><a href="/assets/covid19/state-testing-top-4-7-35aa29e57ac7a4daeb480ba0a3c2d430fe3429828fae31d6473ba0b53cce72ab.png">
+  <img src="/assets/covid19/state-testing-top-4-7-35aa29e57ac7a4daeb480ba0a3c2d430fe3429828fae31d6473ba0b53cce72ab.png" alt="State Testing Top 10" class="zooming" data-rjs="/assets/covid19/state-testing-top-4-7-35aa29e57ac7a4daeb480ba0a3c2d430fe3429828fae31d6473ba0b53cce72ab.png" data-zooming-width="1019" data-zooming-height="482" />
+</a></p>
+
+<p><em>..and the bottom.</em></p>
+
+<p><a href="/assets/covid19/state-testing-bottom-4-7-1fedede663256eb19ab65784eb4ab4a7991a5baf6f3bc43956c97d322a1c6d0d.png">
+  <img src="/assets/covid19/state-testing-bottom-4-7-1fedede663256eb19ab65784eb4ab4a7991a5baf6f3bc43956c97d322a1c6d0d.png" alt="State Testing Bottom 10" class="zooming" data-rjs="/assets/covid19/state-testing-bottom-4-7-1fedede663256eb19ab65784eb4ab4a7991a5baf6f3bc43956c97d322a1c6d0d.png" data-zooming-width="1033" data-zooming-height="485" />
+</a></p>
+
+<p>The surprise here is California (negatively) with an abyssmal rate of 3 tests per 1000 and Louisiana (positively) who is at 16 tests per 1000.</p>
+
+<p><em>Hospitalization</em></p>
+
+<p><a href="/assets/covid19/hospitalization-4-7-e10b4bb135f36f43ff5a2f7bef015aeba0afa105067dc888d30823e2119ae959.png">
+  <img src="/assets/covid19/hospitalization-4-7-e10b4bb135f36f43ff5a2f7bef015aeba0afa105067dc888d30823e2119ae959.png" alt="Hospitalizations in the US" class="zooming" data-rjs="/assets/covid19/hospitalization-4-7-e10b4bb135f36f43ff5a2f7bef015aeba0afa105067dc888d30823e2119ae959.png" data-zooming-width="984" data-zooming-height="435" />
+</a></p>
+
+<p><em>Confirmed Case Tracker</em></p>
+
+<p><a href="/assets/covid19/confirmed-log-4-7-358860fb5f91b4365dd01a36bc8145e3c9bf4e03eba3ed57d559698ce32e1ad2.png">
+  <img src="/assets/covid19/confirmed-log-4-7-358860fb5f91b4365dd01a36bc8145e3c9bf4e03eba3ed57d559698ce32e1ad2.png" alt="Confirmed Case Tracker" class="zooming" data-rjs="/assets/covid19/confirmed-log-4-7-358860fb5f91b4365dd01a36bc8145e3c9bf4e03eba3ed57d559698ce32e1ad2.png" data-zooming-width="1068" data-zooming-height="519" />
+</a></p>
+
+<p>This is now become a US and Europe dominated disease. China numbers lack credibility.</p>
+
+<p><em>Daily Confirmed Cases</em></p>
+
+<p><a href="/assets/covid19/daily-confirmed-4-7-111588c132f7cd28375c494efe88780c0b1384b5c64b0295d1272871706b4923.png">
+  <img src="/assets/covid19/daily-confirmed-4-7-111588c132f7cd28375c494efe88780c0b1384b5c64b0295d1272871706b4923.png" alt="Confirmed Case Tracker" class="zooming" data-rjs="/assets/covid19/daily-confirmed-4-7-111588c132f7cd28375c494efe88780c0b1384b5c64b0295d1272871706b4923.png" data-zooming-width="1050" data-zooming-height="498" />
+</a></p>
+
+<p>Cases in US, Italy and Spain have either peaked or towards a downward trend.</p>
+
+<p><em>Percent of Recovered, Mortality and Yet to Recover by key affected countries</em></p>
+
+<p><a href="/assets/covid19/percent-4-7-a5e5a0cc453ee395a963ffe603871c3e7c18603bd200f29ac5af1e5cdb41495c.png">
+  <img src="/assets/covid19/percent-4-7-a5e5a0cc453ee395a963ffe603871c3e7c18603bd200f29ac5af1e5cdb41495c.png" alt="Percent Recovered" class="zooming" data-rjs="/assets/covid19/percent-4-7-a5e5a0cc453ee395a963ffe603871c3e7c18603bd200f29ac5af1e5cdb41495c.png" data-zooming-width="986" data-zooming-height="414" />
+</a></p>
+
+<p>Mortality is in double digits for Italy, Spain and United Kingdom.</p>
+
+<p><a href="/assets/covid19/top-10-4-7-5b954ca1aade0a05e1364dbc0c2d7158fd72e5d867353f4e95555be924e71e84.png">
+  <img src="/assets/covid19/top-10-4-7-5b954ca1aade0a05e1364dbc0c2d7158fd72e5d867353f4e95555be924e71e84.png" alt="Percent Recovered" class="zooming" data-rjs="/assets/covid19/top-10-4-7-5b954ca1aade0a05e1364dbc0c2d7158fd72e5d867353f4e95555be924e71e84.png" data-zooming-width="680" data-zooming-height="289" />
+</a></p>
+
+<p><em>US State Tracker</em></p>
+
+<p><a href="/assets/covid19/state-confirmed-log-4-7-72410de9784111e8d139e79ba122895f2205ae0e6593d2afb9641107012a9d6e.png">
+  <img src="/assets/covid19/state-confirmed-log-4-7-72410de9784111e8d139e79ba122895f2205ae0e6593d2afb9641107012a9d6e.png" alt="State Tracker" class="zooming" data-rjs="/assets/covid19/state-confirmed-log-4-7-72410de9784111e8d139e79ba122895f2205ae0e6593d2afb9641107012a9d6e.png" data-zooming-width="1024" data-zooming-height="480" />
+</a></p>
+
+<p>New York (especially NYC) is the <a href="https://www.nytimes.com/2020/03/22/nyregion/Coronavirus-new-York-epicenter.html">epicenter for the US</a> and has become the epicenter of the world with <a href="https://www1.nyc.gov/assets/doh/downloads/pdf/imm/covid-19-daily-data-summary.pdf" target="_blank"><strong>140,000</strong> confirmed cases and a mortality rate that jumped to <strong>3.97%</strong> from <strong>1.61%</strong></a>.</p>
+
+<p><a href="/assets/covid19/state-rates-4-7-8ee41b65a49dd70788b440fca8c306b7772696b9d73efbae9bdffc6e2afb4fcb.png">
+  <img src="/assets/covid19/state-rates-4-7-8ee41b65a49dd70788b440fca8c306b7772696b9d73efbae9bdffc6e2afb4fcb.png" alt="State Tracker" class="zooming" data-rjs="/assets/covid19/state-rates-4-7-8ee41b65a49dd70788b440fca8c306b7772696b9d73efbae9bdffc6e2afb4fcb.png" data-zooming-width="1025" data-zooming-height="426" />
+</a></p>
+
+<p>This chart is from a subset of data that filters the top 10 states confirmed cases in the US.</p>
+
+<p>Here <code class="highlighter-rouge">% Confirmed</code> is defined as the <code class="highlighter-rouge">State confirmed cases / Total confirmed cases in the US</code> and <code class="highlighter-rouge">Mortality</code> is defined as <code class="highlighter-rouge">State Deaths / State Confirmed Cases </code></p>
+
+<p>NYC is an outlier but Michigan, Louisiana and Georgia are not doing well.</p>
+
+<p><strong>Update: 24th March 2020</strong></p>
+
+<p>General Commentary: Case Trackers and Maps are limited to determining how the virus is progressing. But none of this is actionable. What really matters at the end of the day is do the following -</p>
+
+<ul>
+  <li>
+    <p>The Hospitalization Statistics by Region that will determine and predict the stress on the system so that the appropriate resources can be diverted on time.</p>
+  </li>
+  <li>
+    <p>Intervention and Outreach by Health Insurance Companies (which has been extremely disappointing) to their most vulnerable population - high morbidity / high risk. The fact is that this information is available to them at their fingertips, but I have yet see any action.</p>
+  </li>
+  <li>
+    <p>An Open Data Consortium of Health Insurance, Hospitals, Pharmacies, Tech Companies and other healthcare parties to share COVID-19 related data through a mechanism similar to <a href="https://www.data.gov/" target="_blank">Data.gov</a> so that crowd-sourcing of creation of effective actionable analytics and delivery to the the front-lines in real-time can be achieved. This is simply missing.</p>
+  </li>
+  <li>
+    <p>Data and Analytics that help the medical supply chain deliver the equipment needed to the areas most in need.</p>
+  </li>
+</ul>
+
+<p>The Open Source community is doing much more in this space than the leaders in healthcare.</p>
+
+<p>Martin Woodward on <a href="https://github.blog/2020-03-23-open-collaboration-on-covid-19/" target="_blank">Github Blog</a> summarizing all the open source projects currently focused on tackling this virus.</p>
+
+<blockquote>
+  <p>We’re inspired to see this community of contributors come together with such a robust response to the COVID-19 outbreak. We are already donating 60,000 computing hours/day to Folding@home, and we’ve reached out to other projects to offer support.</p>
+</blockquote>
+
+<ol>
+  <li>
+    <p>Corrected the Wartime Defence Production Act - The President never executed on it. Disappointing.</p>
+  </li>
+  <li>
+    <p>Updated Tracker and Percent Charts</p>
+  </li>
+  <li>
+    <p>Added US States Tracker</p>
+  </li>
+</ol>
+
+<h3 id="-covid19"><a name="COVID19"></a> COVID19</h3>
+
+<p>History is in the making. The emergence of the Covid19 virus in Wuhan province in November 2019 coincided with Chinese Lunar New Year holiday. Despite its innocous beginnings, 5 months later 236,000 are confirmed infected and nearly 10,000 dead. This is the first time in human history that the entire world is tackling a single problem created by this invisible enemy. Some countries like <a href="https://www.sciencemag.org/news/2020/03/coronavirus-cases-have-dropped-sharply-south-korea-whats-secret-its-success" target="_blank">South Korea with its large testing apparatus has got the virus in control</a>, while countries can Iran and <a href="https://www.cbsnews.com/live-updates/coronavirus-disease-covid-19-latest-news-2020-03-19/" target="_blank">Italy are overwhelmed</a>.</p>
+
+<p>Quarantines, social-distancing, remote work and other strategies have been adopted in the US and across the globe to limit the spread of the virus. In short, we as humans have nearly shut down the world economy. The US has slowly started to see the impact of the virus and <a href="https://www.theatlantic.com/ideas/archive/2020/03/us-isnt-ready-whats-about-happen/607636/" target="_blank">is quite ill-prepared</a>. Whether we become the Italy or we are South Korea will be decided in the next couple of weeks.</p>
+
+<p>The world is racing to create a vaccine but it may be at least a few months away. Cosmetic companies are changing their processess to create hand-santizers. People are designing much needed ventilators. The genome of the virus has been mapped and shared across world. And Data Scientists and Engineers are doing what they can do - make the best of what data is available to them to try and get an handle on how to track the virus and its impact. THIS IS NOT A MOVIE.</p>
+
+<p><strong>Tracking the Impact - with Data</strong></p>
+
+<p>The most used resource for the impact of the Virus on humans comes from John Hopkins University’s <a href="https://coronavirus.jhu.edu/map.html" target="_blank">COVID-19 Map</a> and the underlying data fueling the application. It provides the basic statistics. Deeper analysis is as follows.</p>
+
+<p><em>Percent of Recovered, Mortality and Yet to Recover by key affected countries - As of 20th March 2020</em></p>
+
+<p><a href="/assets/covid19/percent-3-20-28e4b521c62b19be795cd433e5fc3c0e1a0d3df6c7d68a6c873977e45ef63814.png">
+  <img src="/assets/covid19/percent-3-20-28e4b521c62b19be795cd433e5fc3c0e1a0d3df6c7d68a6c873977e45ef63814.png" alt="Percent Indicators" class="zooming" data-rjs="/assets/covid19/percent-3-20-28e4b521c62b19be795cd433e5fc3c0e1a0d3df6c7d68a6c873977e45ef63814.png" data-zooming-width="1157" data-zooming-height="443" />
+</a></p>
+
+<p>As time goes, I would expect higher recovery rates across all the countries due to better intervention and time allowed for recovery and immunity</p>
+
+<p><em>Confirmed Case Tracker - As of 20th March 2020</em></p>
+
+<p><a href="/assets/covid19/percent-987affaa2d3d8e960cf7b244771e9afa91ceb96825edb8b22a5df6b26d7f7dde.png">
+  <img src="/assets/covid19/confirmed-log-dae481118c81ed6ccdb08dcf67dac60680c427b5c2d660b704e247625b4de3d1.png" alt="Confirmed Case Tracker" class="zooming" data-rjs="/assets/covid19/percent-987affaa2d3d8e960cf7b244771e9afa91ceb96825edb8b22a5df6b26d7f7dde.png" data-zooming-width="1311" data-zooming-height="409" />
+</a></p>
+
+<p>There are <a href="https://covid19dashboards.com/compare-country-trajectories/" target="_blank">many versions of this out there</a> but I am skeptical of the work. The **Confirmed Case Tracker” is critical enough to justify creating and updating it live.</p>
+
+<p>The above indicates the growth profile of confirmed cases by the number of days since the 100th case was determined in each country. The result at this point in sobering. The US is looking more like Italy then South Korea. See the <span style="color:red">Red</span> and <span style="color:blue">Blue</span> traces. I have hopes that we will bend this trend by wide-spread tests, physical distancing and smart policy.</p>
+
+<p><a href="/assets/covid19/confirmed-a8e06db7591f47dbd2cf0e67a64710b213ec86e1e4b071721ecb4ead5ececb1e.png">
+  <img src="/assets/covid19/confirmed-a8e06db7591f47dbd2cf0e67a64710b213ec86e1e4b071721ecb4ead5ececb1e.png" alt="Confirmed Case Tracker" class="zooming" data-rjs="/assets/covid19/confirmed-a8e06db7591f47dbd2cf0e67a64710b213ec86e1e4b071721ecb4ead5ececb1e.png" data-zooming-width="1201" data-zooming-height="490" />
+</a></p>
+
+<p>The jupyter notebook is available <a href="https://github.com/superaja/covid19/blob/master/covid19.ipynb" target="_blank">here</a></p>
+
+<p><strong>Other Related Work</strong></p>
+
+<ol>
+  <li><a href="https://www.fast.ai/2020/03/09/coronavirus/" target="_blank">Covid-19, your community, and you — a data science perspective</a>: Well articulated perspective by Jeremy Howard and Rachel Thomas</li>
+  <li><a href="https://covid19dashboards.com/" target="_blank">Covid Dashboards</a>: Collection of various Dashboards. Currently heavy on Bayesian Modeling.</li>
+  <li><a href="http://depts.washington.edu/labmed/covid19/" target="_blank">UW Virology COVID-19 Dashboard</a>: This is probably the best Testing metrics - but currently only for the tests done by the UW Virology Department.</li>
+  <li><a href="https://covid-oss-help.org/" target="_blank">COVID-19 Open Soure Help Desk</a>: Kudos to the open source community leaders to help the front line doctors, nurses, virologist, epidemiologist for not just with regards to analytics but broader software and data needs.</li>
+  <li><a href="https://www.trackcorona.live/" target="_blank">Near Real Time Corona Tracker</a>: Probably the most real time tracker, I could find.</li>
+  <li><a href="https://covidtracking.com/" target="_blank">Covid Tracking project</a>: A great source for testing data in the US</li>
+  <li><a href="https://github.com/nytimes/covid-19-data" target="_blank">New York Time US and County Level Data</a>: Kudos to New York Times for open sourcing this data to researchers in the absence of any government entity doing it.</li>
+</ol>
+
+<p>Let me conclude by <a href="https://twitter.com/naval" target="_blank">@Naval</a> latest tweet.</p>
+
+<p><a href="https://twitter.com/naval/status/1240714732689960960" target="_blank">“For the first time in human history, the entire world is focused on one problem.”</a></p>
+
+          </div>
+          <div class="article-share">
+            
+            
+            <a href="https://twitter.com/home?status=Tracking+Covid19+-+An+Analytical+Record%20-%20https://augml.xyz/posts/covid19%20by%20@Suprraja" title="Share on Twitter" rel="noreferrer noopener" target="_blank">
+              <svg viewBox="0 0 512 512"><path d="M492 109.5c-17.4 7.7-36 12.9-55.6 15.3 20-12 35.4-31 42.6-53.6 -18.7 11.1-39.4 19.2-61.5 23.5C399.8 75.8 374.6 64 346.8 64c-53.5 0-96.8 43.4-96.8 96.9 0 7.6 0.8 15 2.5 22.1 -80.5-4-151.9-42.6-199.6-101.3 -8.3 14.3-13.1 31-13.1 48.7 0 33.6 17.2 63.3 43.2 80.7C67 210.7 52 206.3 39 199c0 0.4 0 0.8 0 1.2 0 47 33.4 86.1 77.7 95 -8.1 2.2-16.7 3.4-25.5 3.4 -6.2 0-12.3-0.6-18.2-1.8 12.3 38.5 48.1 66.5 90.5 67.3 -33.1 26-74.9 41.5-120.3 41.5 -7.8 0-15.5-0.5-23.1-1.4C62.8 432 113.7 448 168.3 448 346.6 448 444 300.3 444 172.2c0-4.2-0.1-8.4-0.3-12.5C462.6 146 479 129 492 109.5z"/></svg>
+            </a>
+            <!--
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://augml.xyz/posts/covid19" title="Share on Facebook" rel="noreferrer noopener" target="_blank">
+              <svg viewBox="0 0 512 512"><path d="M288 192v-38.1c0-17.2 3.8-25.9 30.5-25.9H352V64h-55.9c-68.5 0-91.1 31.4-91.1 85.3V192h-45v64h45v192h83V256h56.4l7.6-64H288z"/></svg>
+            </a> -->
+          </div>
+
+          
+        </article>
+        <footer class="footer scrollappear">
+  <p>
+    Obsidian Steel Copyright © 2019–2021. Theme is based on<a href="https://github.com/nielsenramon/chalk" target="_blank"</a> Chalk.
+  </p>
+</footer>
+
+      </div>
+    </div>
+  </main>
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143108295-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-143108295-2');
+  </script>
+
+
+<script src="/assets/vendor-1a8f6e33220f845e569c20b3c09a5d43f87908ea7168ea139ce2135770f7b1b5.js" type="text/javascript"></script>
+
+
+  <script src="/assets/webfonts-96493456d319d1bf419afdf8701552d4d486fee6afd304897d4fd81eb4e0cc0b.js" type="text/javascript"></script>
+
+
+
+  <script src="/assets/scrollappear-e2da8ea567e418637e31266cc5302126eaa79f62a2273739086358b589a89ee6.js" type="text/javascript"></script>
+
+
+<script src="/assets/application-cfde13ac81ddaf4351b2e739603e2baf688d0fcc9aba613fe62bbb1c7b037fb9.js" type="text/javascript"></script>
+
+
+</body>
+</html>

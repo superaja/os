@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Obsidian Steel | Downloading Freely Available Textbooks with Python</title>
+  <meta name="description" content="Springer Link made their coveted text books available for download. A simple code to download them using python web-scraping libraries">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="Downloading Freely Available Textbooks with Python">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://augml.xyz/posts/book-download">
+  <meta property="og:description" content="Springer Link made their coveted text books available for download. A simple code to download them using python web-scraping libraries">
+  <meta property="og:site_name" content="Obsidian Steel">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="https://augml.xyz/posts/book-download">
+  <meta name="twitter:title" content="Downloading Freely Available Textbooks with Python">
+  <meta name="twitter:description" content="Springer Link made their coveted text books available for download. A simple code to download them using python web-scraping libraries">
+
+  
+    
+      <meta property="og:image" content="https://augml.xyz/assets/oslogo-c6d880df930358b871752234dce5a6ee55965d57422cee3aac2b7244bacf525d.png">
+      <meta name="twitter:image" content="https://augml.xyz/assets/oslogo-c6d880df930358b871752234dce5a6ee55965d57422cee3aac2b7244bacf525d.png">
+    
+  
+
+  <link href="https://augml.xyz/feed.xml" type="application/rss+xml" rel="alternate" title="Obsidian Steel Last 10 blog posts" />
+
+  
+
+  
+
+    
+      <link rel="icon" type="image/x-icon" href="/assets/favicon-light-22c205a680138d6ed7626a0c549bce2fa252eb358df80c69bcc3d2d5b2a9ee05.ico">
+      <link rel="apple-touch-icon" href="/assets/apple-touch-icon-light-72f711e49b77f9ed0a9f6d50b99de08cb0fea60e64860674aebdbe816362177f.png">
+      <link rel="stylesheet" type="text/css" href="/assets/light-b2cc845305e77df294c0cb054632d4a7919c46958174afe7bb179705a882022d.css">
+    
+
+  
+
+</head>
+
+<body>
+  <main>
+    <div class="grid grid-centered">
+      <div class="grid-cell">
+        <nav class="header-nav scrollappear">
+  <a href="/" class="header-logo" title="Obsidian Steel">Obsidian Steel</a>
+  <ul class="header-links">
+    
+      <li>
+        <a href="/about" title="About me">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-about">
+  <use href="/assets/about-ecf154b571ab8034ae00aeed91a3b7ad68db80b46d958753ad6216c919486e88.svg#icon-about" xlink:href="/assets/about-ecf154b571ab8034ae00aeed91a3b7ad68db80b46d958753ad6216c919486e88.svg#icon-about"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="https://twitter.com/Suprraja" rel="noreferrer noopener" target="_blank" title="Twitter">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-twitter">
+  <use href="/assets/twitter-8842c33965263ad1b03a978406826677a668f94125d5837e70ab83f24b3213a7.svg#icon-twitter" xlink:href="/assets/twitter-8842c33965263ad1b03a978406826677a668f94125d5837e70ab83f24b3213a7.svg#icon-twitter"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+      <li>
+        <a href="https://github.com/superaja" rel="noreferrer noopener" target="_blank" title="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-github">
+  <use href="/assets/github-094f81040819f34343ee6ffff0980f17e2807b08b595eaaf66ae3554934fd78d.svg#icon-github" xlink:href="/assets/github-094f81040819f34343ee6ffff0980f17e2807b08b595eaaf66ae3554934fd78d.svg#icon-github"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- My Site-->
+    
+      <li>
+        <a href="http://tc.0bsidiansteel.com" rel="noreferrer noopener" target="_blank" title="Tracking Cat">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-tc1">
+  <use href="/assets/tc1-15ecece0b41c5312a1012d3065b427cca87e57a603c1f786f8ef1ea07e8861fd.svg#icon-tc1" xlink:href="/assets/tc1-15ecece0b41c5312a1012d3065b427cca87e57a603c1f786f8ef1ea07e8861fd.svg#icon-tc1"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    <!-- End My Site-->
+    
+      <li>
+        <a href="/feed.xml" rel="noreferrer noopener" target="_blank" title="RSS">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-rss">
+  <use href="/assets/rss-541ec5cea9cefd10d2fcfec01888f3f231a8829940249835fa7b7b3a12ae0d0d.svg#icon-rss" xlink:href="/assets/rss-541ec5cea9cefd10d2fcfec01888f3f231a8829940249835fa7b7b3a12ae0d0d.svg#icon-rss"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+  </ul>
+</nav>
+
+
+
+        <article class="article scrollappear">
+          <header class="article-header">
+            <h1>Downloading Freely Available Textbooks with Python</h1>
+            <p>Springer Link made their coveted text books available for download. A simple code to download them using python web-scraping libraries</p>
+            <div class="article-list-footer">
+  <span class="article-list-date">
+    May 13, 2020
+  </span>
+  <span class="article-list-divider">-</span>
+  <span class="article-list-minutes">
+    
+    
+      3 minute read
+    
+  </span>
+  <span class="article-list-divider">-</span>
+  <div class="article-list-tags">
+    
+      
+      <a href="/tag/misc" title="See all posts with tag 'Misc'">Misc</a>
+    
+      
+      <a href="/tag/coding" title="See all posts with tag ''"></a>
+    
+  </div>
+</div>
+          </header>
+
+          <div class="article-content">
+            <p>I am an avid book reader. I prefer a physical book over digital as I like the feel of a book in my hand and I would rather spend on a book rather than a license to read a book. So when <a href="https://www.springernature.com/gp/researchers/the-source/blog/blogposts-life-in-research/access-textbooks-for-free-during-the-coronavirus-lockdown/17897628?utm_source=springer&amp;utm_medium=banner&amp;utm_content=leaderboard&amp;utm_campaign=CMTL_1_RS_CMTL_Free%20Textbooks_Source_Springer_Banner_MPU_Leader" target="_blank">Springer announced the availability of some of most coveted textbooks to freely download</a> during the lockdown to support students and teachers, I had mixed feelings. I owe some of these books but I also wanted to sample others that are in different fields (e.g. Neurobiology). If I really like what I sample, I can buy those physical book. Finally after some argument with myself, I decided to go ahead and download them.</p>
+
+<p>To make life easy, I automated the process of downloading all of the freely available books. Some of the decisions I made -</p>
+
+<ol>
+  <li>Use Python’s BeautifulSoup</li>
+  <li>Use Google Drive to download the PDFs</li>
+  <li>Use Google Colab Notebook</li>
+</ol>
+
+<p>There are some complexities that had to be addressed. Firstly Springer provided an <a href="https://resource-cms.springernature.com/springer-cms/rest/v1/content/17858272/data/v5" target="_blank">excel spreadsheet</a> with details of the books and mostly importantly the download URL. But the download URL is not exactly what I was expecting. It was a link to the home page of a particular book and not the book location. Secondly, there was no specific pattern I could find between the given URL in the spreadsheet and the download URL. This meant I had to use web-scraping to get the download link of the book.</p>
+
+<p>Example: Fundamentals of Power Electronics book’s home-page URL is <code class="highlighter-rouge">https://link.springer.com/book/10.1007%2Fb100747</code> but the location of the PDF as provided on the home page is <code class="highlighter-rouge">https://link.springer.com/content/pdf/10.1007%2Fb100747.pdf</code>. Do not get fooled by the pattern <code class="highlighter-rouge">10.1007%2Fb100747.pdf</code> in this example. This is not necessarily applicable across all the books.</p>
+
+<p>After looking at a few home page URLs, I was able to locate an <code class="highlighter-rouge">href</code> and a class <code class="highlighter-rouge">data-track-action</code> in the following <code class="highlighter-rouge">&lt;a href="/content/pdf/10.1007%2Fb100747.pdf" target="_blank"
+											data-track-action="Book download - pdf" data-track-label=""&gt;</code> that was common and uniquely identified the link I needed to set-up BeautifulSoup search parameters.</p>
+
+<p><strong>An important note</strong>: I am vehemently opposed to using web-scraping for illegal / blantant downloding of content that is created by hard-working people and owned by others - Books are no exception. Knowledge is priceless and paying a few dollars for a physical copy (or digital) only increases the quality of books as smart people will be encouraged to write and publish.</p>
+
+<p>The following is the code. The notebook can be accessed <a href="https://github.com/superaja/notebooks/blob/master/book_download.ipynb" target="_blank">here</a></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Module Import
+import requests
+import pandas as pd
+from bs4 import BeautifulSoup
+import re
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># mount google drive
+from google.colab import drive
+drive.mount('/content/drive')
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Go to this URL in a browser: https://accounts.google.com/o/oauth2/auth?client_id=...
+
+Enter your authorization code:
+··········
+Mounted at /content/drive
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># change your location here for the Springer Book Data which is linked above.
+df = pd.read_excel('/content/drive/My Drive/Books/Springer/Free+English+textbooks.xlsx')
+df.head(5)
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># get the urls and book titles and combine them into a list
+url_link = list(df['OpenURL'].iloc[0:])
+book_title = df['Book Title'].iloc[0:]
+r = list(zip(book_title, url_link))
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># PDF Writer function
+def writer(name,download_url):
+  # name: Name of the Book
+  # download_url: the springer location for the book
+  headers = {}
+  r = requests.get(download_url, stream = True, headers=headers)
+  # your own target location below
+  with open('/content/drive/My Drive/Books/Springer/'+name+'.pdf',"wb") as pdf: 
+    for chunk in r.iter_content(chunk_size=1024): 
+      # writing one chunk at a time to pdf file 
+      if chunk: 
+        pdf.write(chunk) 
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#main execution
+link = 'https://link.springer.com'
+for url in r:
+  payload = {}
+  headers= {}
+  response = requests.request("GET", url[1], headers=headers, data = payload)
+  #response = requests.get(url)
+  soup= BeautifulSoup(response.text, "html.parser")
+  # find the value of href in the 'a' tag where the class 'data-track-action' starts with "Book"
+  first_pass = soup.find('a', {'data-track-action': re.compile('^Book')})
+  download_url = link + str(first_pass['href'])
+  name = url[0].replace(" ", "")
+  print ("Downloading Book" + name)
+  writer(name, download_url)
+  print ("Download Complete")
+</code></pre></div></div>
+
+          </div>
+          <div class="article-share">
+            
+            
+            <a href="https://twitter.com/home?status=Downloading+Freely+Available+Textbooks+with+Python%20-%20https://augml.xyz/posts/book-download%20by%20@Suprraja" title="Share on Twitter" rel="noreferrer noopener" target="_blank">
+              <svg viewBox="0 0 512 512"><path d="M492 109.5c-17.4 7.7-36 12.9-55.6 15.3 20-12 35.4-31 42.6-53.6 -18.7 11.1-39.4 19.2-61.5 23.5C399.8 75.8 374.6 64 346.8 64c-53.5 0-96.8 43.4-96.8 96.9 0 7.6 0.8 15 2.5 22.1 -80.5-4-151.9-42.6-199.6-101.3 -8.3 14.3-13.1 31-13.1 48.7 0 33.6 17.2 63.3 43.2 80.7C67 210.7 52 206.3 39 199c0 0.4 0 0.8 0 1.2 0 47 33.4 86.1 77.7 95 -8.1 2.2-16.7 3.4-25.5 3.4 -6.2 0-12.3-0.6-18.2-1.8 12.3 38.5 48.1 66.5 90.5 67.3 -33.1 26-74.9 41.5-120.3 41.5 -7.8 0-15.5-0.5-23.1-1.4C62.8 432 113.7 448 168.3 448 346.6 448 444 300.3 444 172.2c0-4.2-0.1-8.4-0.3-12.5C462.6 146 479 129 492 109.5z"/></svg>
+            </a>
+            <!--
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://augml.xyz/posts/book-download" title="Share on Facebook" rel="noreferrer noopener" target="_blank">
+              <svg viewBox="0 0 512 512"><path d="M288 192v-38.1c0-17.2 3.8-25.9 30.5-25.9H352V64h-55.9c-68.5 0-91.1 31.4-91.1 85.3V192h-45v64h45v192h83V256h56.4l7.6-64H288z"/></svg>
+            </a> -->
+          </div>
+
+          
+        </article>
+        <footer class="footer scrollappear">
+  <p>
+    Obsidian Steel Copyright © 2019–2021. Theme is based on<a href="https://github.com/nielsenramon/chalk" target="_blank"</a> Chalk.
+  </p>
+</footer>
+
+      </div>
+    </div>
+  </main>
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143108295-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-143108295-2');
+  </script>
+
+
+<script src="/assets/vendor-1a8f6e33220f845e569c20b3c09a5d43f87908ea7168ea139ce2135770f7b1b5.js" type="text/javascript"></script>
+
+
+  <script src="/assets/webfonts-96493456d319d1bf419afdf8701552d4d486fee6afd304897d4fd81eb4e0cc0b.js" type="text/javascript"></script>
+
+
+
+  <script src="/assets/scrollappear-e2da8ea567e418637e31266cc5302126eaa79f62a2273739086358b589a89ee6.js" type="text/javascript"></script>
+
+
+<script src="/assets/application-cfde13ac81ddaf4351b2e739603e2baf688d0fcc9aba613fe62bbb1c7b037fb9.js" type="text/javascript"></script>
+
+
+</body>
+</html>

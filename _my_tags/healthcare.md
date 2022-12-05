@@ -1,4 +1,0 @@
----
-slug: healthcare
-name: Healthcare
----
